@@ -1,0 +1,215 @@
+.tags{
+  .tagitems-holders{
+    display: flex;
+    .tagitems{
+      margin-right:15rpx;
+      padding-left:15rpx;
+      padding-right:15rpx;
+      color:white;
+      background-color:$font-color-base ;
+    }
+  }
+}
+.filter {
+    display: flex;
+    width: 720rpx;
+    margin-left: 15rpx;
+    border-top: 1px solid $border-color-light;
+    border-bottom: 1px solid $border-color-light;
+    .filter-money,
+    .filter-new {
+      width: 160rpx;
+      margin: 10rpx;
+    }
+    .filter-new {
+      border-right: 1px solid $border-color-light;
+    }
+    .filter-active {
+      color: $base-color;
+    }
+  
+    .filter-new-up:after {
+      font-family: uniicons;
+      font-size: 40upx;
+      content: "\e580";
+      color: $font-color-light;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  
+    .filter-money-up:after {
+      font-family: uniicons;
+      font-size: 40upx;
+      content: "\e580";
+      color: $font-color-light;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .filter-active:after {
+      color: $base-color;
+    }
+  }
+  .communityname{
+      color:$font-color-base;
+  } 
+  .title {
+    border-bottom: 2px solid $base-color;
+    position: relative;
+    font-size: 20px;
+    color:$font-color-base;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .v-main {
+    background-color: white;
+    min-height: 900rpx;
+    padding-bottom: 60rpx;
+  }
+   
+  .uni-tab {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rpx;
+    height: 80rpx;
+  }
+  .uni-tab-item {
+    /* #ifndef APP-PLUS */
+    display: inline-block;
+    /* #endif */
+    flex-wrap: nowrap;
+    width: 50%;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 5rpx;
+  }
+  .uni-tab-item-title {
+    font-size: 30rpx;
+    line-height: 80rpx;
+    flex-wrap: nowrap;
+    /* #ifndef APP-PLUS */
+    white-space: nowrap;
+    /* #endif */
+  }
+  .uni-tab-item-active {
+    border-bottom: 10rpx solid #df5000;
+  }
+  .uni-tab-item-title-active {
+    color: #df5000;
+  }
+  
+  .feedback-box {
+    border-bottom: 1px solid #f5f9f7;
+    position: relative;
+    padding: 30rpx; 
+  }
+  .feedbox {
+    border-bottom: 1px solid #f5f9f7;
+    position: relative;
+    padding: 50rpx 30rpx;
+  }
+  .picturebox {
+    position: relative;
+    display: flex;
+    margin-top: 10rpx;
+    overflow: hidden;
+  }
+  .picture {
+    position: relative;
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 10rpx;
+    margin-right: 20rpx;
+    padding:10rpx;
+    margin-right:10rpx;
+    border: 1px solid $border-color-base;
+    box-shadow: 0px 0px 5px $border-color-base;
+  }
+   
+ 
+  .enddate {
+    color: #666; 
+    margin-right: 15rpx;
+  }
+  .needpropertior{
+      border-radius: 30rpx;
+      background-color: $base-color;
+      color: #ffffff;
+      padding: 0 15rpx;
+  }
+  .delete-image {
+    position: absolute;
+    width: 150rpx;
+    height: 150rpx;
+    right: 15rpx;
+    border-radius: 75rpx;
+    top: 172rpx;
+    border: 3px solid white;
+    box-shadow: 0px 0px 5px $border-color-base;
+  }
+  .result {
+    position: relative;
+    font-size: 25rpx;
+    color: #666;
+    margin-bottom: 30rpx;
+    max-width: 300rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .emptycontainer {
+    position: absolute;
+    padding: 20rpx;
+    left: 200rpx;
+  }
+  .empty-img {
+    width: 300rpx;
+    height: 300rpx;
+    position: relative;
+  }
+  
+  .empty-text {
+    position: absolute;
+    left: 25%;
+  }
+  
+ 
+  .second-title{
+      display: flex; 
+      margin-left: -15rpx;
+  }
+  .content {   
+      white-space: nowrap; 
+      overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .time {  
+    color: #8c8c8c;
+  }
+  .v-money{
+      display: flex;
+  }
+  .money-holder{
+      display: flex;
+      text-align: center;
+      margin:0 auto;  
+  }
+  .moneytxt{ 
+      margin-top: 50rpx;
+      color:$font-color-light
+  }
+  .money { 
+    font-size: 40px;
+    color:#df5000;
+    margin-left: 15rpx;
+  }
+  .star {
+    position: relative;
+    margin-bottom: 35rpx;
+  }
+  .starbox {
+    position: relative;
+    margin-bottom: -15rpx;
+  }

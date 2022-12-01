@@ -1,0 +1,101 @@
+/* 页面左右间距 */
+$spacing-lg: 30rpx;
+$spacing-base: 20rpx;
+$spacing-sm: 10rpx;
+$margin-app-top: 65rpx;
+$color-white: #fff;
+
+$page-row-spacing: 30upx;
+$page-color-base: #f8f8f8;
+$page-color-light: #f8f6fc;
+$base-color: #FF8000;
+$page-color-bg: #FFAB4E;
+/* 文字尺寸 */
+$font-sm: 24upx;
+$font-base: 28upx;
+$font-lg: 32upx;
+/* 背景色 */
+$background-color-gray:#dbdbdb;
+/*文字颜色*/
+$font-color-dark: #303133;
+$font-color-base: #606266;
+$font-color-light: #909399;
+$font-color-disabled: #C0C4CC;
+$font-color-spec: #4399fc;
+
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+$border-color-base: #E4E7ED;
+$border-color-light: #EBEEF5;
+
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+
+/* 行为相关颜色 */
+$uni-color-primary:#FFAB4E;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+$baseurl:"https://property.chidict.com/app/";
+.uni-page-body{
+		height: 100%;
+	}
+  .txtclick{
+    color:$font-color-spec;
+    font-weight: bold; 
+    margin-left: 15rpx;
+  }
+.btns{
+  margin-top:15rpx;
+  display: flex;
+  justify-content: space-between;
+  .btn{
+    background-color:  $base-color;
+    color:white;
+  }
+}
+.uni-error{
+	border:1px solid $uni-color-error;
+	box-shadow: 0px 0px 5px $uni-color-error;
+}
+.getmore { 
+    text-align: center;
+    margin-top: 20rpx;
+    padding-bottom: 60rpx;
+    font-size: 24rpx;
+    color: #666;
+  }
+
+  .emptycontainer { 
+    padding: 20rpx; 
+    text-align: center;
+    .empty-img {
+      width: 300rpx;
+      height: 300rpx;
+      position: relative;
+    }
+    
+    .empty-text {   
+      color:$font-color-light
+    }
+  }
+
+  .tips {
+    margin-top: 60rpx;
+    .title {
+      display: flex;
+    }
+    .tishi {
+      width: 35rpx;
+      height: 35rpx;
+      margin-right: 10rpx;
+    }
+    .appraisetxt {
+      color: $font-color-light;
+    }
+  }
+.status_bar {
+           height: var(--status-bar-height);
+           width: 100%;
+}

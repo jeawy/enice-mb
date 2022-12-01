@@ -1,0 +1,311 @@
+.tags{
+  .tagitems-holders{
+    display: flex;
+    .tagitems{
+      margin-right:15rpx;
+      padding-left:15rpx;
+      padding-right:15rpx;
+      color:white;
+      background-color:$font-color-base ;
+    }
+  }
+}
+.popupholder{
+  padding:15rpx;
+  height: 430rpx;;
+  .bottom-msg{
+    margin-top: 100rpx;
+    text-align: center;
+    .image{
+      width: 90rpx;
+      height:90rpx;
+    }
+    .msg{
+      color:$font-color-base
+    }
+  }
+}
+.tools{
+  position:fixed;
+  right:25rpx;
+  bottom: 60rpx;
+  height: 400rpx;
+  width: 90rpx;
+  border-radius: 40rpx;
+  border-width: 0px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  background-color: white; 
+  overflow: hidden;
+  padding-top:25rpx;
+  .tools__item{
+    
+    height: 120rpx;
+    text-align: center;
+    .tool__img{
+      width: 60rpx;
+      height: 60rpx;
+    }
+    .fct-content{
+      font-size:10px;
+    }
+    
+  }
+}
+.category {
+    display: flex;
+    width: 720rpx;
+    margin-left: 15rpx;
+    .common-function__item{
+      margin-top:25rpx;
+      display: flex;
+      text-align: center;
+		  flex: 1 0 16.67%;
+      border-bottom: 1px solid $border-color-base;
+      .item{ 
+        .common-function__img{
+          width:90rpx;
+          height:90rpx;
+        }
+        .fct-content-active{
+          color:$base-color;
+          font-weight: bold;
+        }
+      }
+    } 
+  }
+  .communityname{
+      color:$font-color-base;
+  } 
+  .title {
+    border-bottom: 2px solid $base-color;
+    position: relative;
+    font-size: 20px; 
+    color:$font-color-base;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .exchangetype{
+      color:$base-color;
+      font-weight: bold;
+    }
+  }
+  .v-main {
+    background-color: white;
+    min-height: 900rpx;
+    padding-bottom: 60rpx;
+  }
+   
+  .uni-tab {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rpx;
+    height: 80rpx;
+  }
+  .uni-tab-item {
+    /* #ifndef APP-PLUS */
+    display: inline-block;
+    /* #endif */
+    flex-wrap: nowrap;
+    width: 50%;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 5rpx;
+  }
+  .uni-tab-item-title {
+    font-size: 30rpx;
+    line-height: 80rpx;
+    flex-wrap: nowrap;
+    /* #ifndef APP-PLUS */
+    white-space: nowrap;
+    /* #endif */
+  }
+  .uni-tab-item-active {
+    border-bottom: 10rpx solid #df5000;
+  }
+  .uni-tab-item-title-active {
+    color: #df5000;
+  }
+  
+  .feedback-box {
+    border-bottom: 1px solid #f5f9f7;
+    position: relative;
+    padding: 30rpx; 
+    min-height: 250rpx;
+    overflow: hidden;
+    .picture_saled{
+      width: 240rpx;
+      height: 240rpx;
+      position:absolute;
+      right:25rpx;
+    }
+  }
+  .feedbox {
+    border-bottom: 1px solid #f5f9f7;
+    position: relative;
+    padding: 50rpx 30rpx;
+  }
+  .picturebox {
+    position: relative;
+    display: flex;
+    margin-top: 10rpx;
+    overflow: hidden;
+  }
+  .picture {
+    position: relative;
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 10rpx;
+    margin-right: 20rpx;
+    padding:10rpx;
+    margin-right:10rpx;
+    border: 1px solid $border-color-base;
+    box-shadow: 0px 0px 5px $border-color-base;
+  }
+    
+  .enddate {
+    color: #666; 
+    margin-right: 15rpx;
+  }
+  .needpropertior{
+      border-radius: 30rpx;
+      background-color: $base-color;
+      color: #ffffff;
+      padding: 0 15rpx;
+  }
+  .delete-image {
+    position: absolute;
+    width: 150rpx;
+    height: 150rpx;
+    right: 15rpx;
+    border-radius: 75rpx;
+    top: 172rpx;
+    border: 3px solid white;
+    box-shadow: 0px 0px 5px $border-color-base;
+  }
+  .result {
+    position: relative;
+    font-size: 25rpx;
+    color: #666;
+    margin-bottom: 30rpx;
+    max-width: 300rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .emptycontainer {
+    width:710rpx;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .empty-img {
+    width: 300rpx;
+    height: 300rpx;
+    position: relative;
+  }
+  
+  .empty-text {
+    text-align: center;
+  }
+  
+ 
+  .second-title{
+      display: flex; 
+      margin-left: -15rpx;
+  }
+  .content {   
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .time {   
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;  
+    margin:5rpx 15rpx;
+    .right{
+      color:$base-color; 
+      position:absolute; 
+      right: 25rpx; 
+      font-size: 20px;
+    }
+    .left{
+      color: #8c8c8c;
+    }
+  }
+  .v-money{
+      display: flex;
+  }
+  .money-holder{
+      display: flex;
+      text-align: center;
+      margin:0 auto;  
+  }
+  .moneytxt{ 
+      margin-top: 50rpx;
+      color:$font-color-light
+  }
+  .money { 
+    font-size: 40px;
+    color:#df5000;
+    margin-left: 15rpx;
+  }
+  .star {
+    position: relative;
+    margin-bottom: 35rpx;
+  }
+  .starbox {
+    position: relative;
+    margin-bottom: -15rpx;
+  }
+
+  .popupshare {
+        .popupshare-holder {
+            width: 750rpx;
+            height: 1200rpx;
+            .fillmsg {
+                width: 750rpx;
+                height: 400rpx;
+                .fxjt {
+                    margin-top: 15rpx;
+                    margin-left: 460rpx;
+                    width: 169rpx;
+                    height: 128rpx;
+                }
+                .txt {
+                    margin-right: 110rpx;
+                    text-align: right;
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+            .wzdl {
+                position: absolute;
+                bottom: 120rpx;
+                width: 320rpx;
+                height: 128rpx;
+                left: 225rpx;
+            }
+        }
+    }
+
+    .contact-btn{
+      font-size:10px;
+      border-top:1px solid white;
+      border-bottom:1px solid white;
+      text-align: center;
+      background-color: white;
+      line-height: 18rpx;;
+      border:none;
+      height: 109rpx;
+      padding:0px;
+      .img{
+        width: 100%;
+      }
+      .txt{
+        font-size:10px;
+        text-align: center;
+      }
+    }
+    .contact-btn::after{ border: none;}

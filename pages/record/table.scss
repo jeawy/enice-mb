@@ -1,0 +1,30 @@
+/* 表格样式 */  
+ .table {
+ 	display: flex;
+ }
+ .headeritem{
+ 	border-bottom: 1px solid $border-color-dark; 
+ 	padding: 0 10rpx;
+	text-align: center;
+ } 
+ .headers .tbcontent {
+	border-left: 1px solid $border-color-dark;    
+ }
+ .headers:last-child .tbcontent, .headers:last-child .tbheader {
+	border-right: 1px solid $border-color-dark;    
+ }
+ .tbcontent{
+	 height: 60rpx;
+	 line-height: 60rpx;
+ }
+ 
+ .tbheader{ 
+	font-size: $font-lg;
+	font-weight: bold;
+	padding: 0 10rpx;
+	border-left: 1px solid $border-color-dark;   
+	border-top: 1px solid $border-color-dark;   
+ } 
+.tbactions{
+	color:$base-color;
+}

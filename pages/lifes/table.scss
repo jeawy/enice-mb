@@ -1,0 +1,16 @@
+/* 表格样式 */  
+ .table {
+ 	display: flex;
+ }
+ .headeritem{
+ 	border: 1rpx solid $border-color-dark; 
+ 	padding: 0 10rpx;
+	text-align: center;
+ } 
+ 
+ .tbheader{
+ 	border: 2rpx solid $border-color-dark;
+	font-size: $font-lg;
+	font-weight: bold;
+	padding: 0 10rpx;
+ } 

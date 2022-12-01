@@ -1,0 +1,423 @@
+ 
+	.shareimg{ 
+		width: 50rpx;
+		height: 50rpx;
+	}
+	.fct-center {
+	    display: flex;
+	    justify-content: space-between;
+	    flex-flow: wrap row;
+	    padding: 20rpx 35rpx 50rpx;
+	    margin: 0rpx 35rpx;
+	    background-color: #FFFFFF;
+	    border-top: 30rpx solid #FF8000;
+	    border-left: 1rpx solid $font-color-light;
+	    border-right: 1rpx solid $font-color-light;
+	    border-bottom: 1rpx solid $font-color-light;
+	    border-bottom-left-radius: 26rpx;
+	    border-bottom-right-radius: 26rpx;
+		position: relative;
+		/* #ifdef MP-WEIXIN */
+		margin-top: 20rpx;  
+		/* #endif*/
+		/* #ifdef APP-PLUS */
+		margin-top: 100rpx;  
+		/*#endif */
+		.title{
+			position: absolute;
+			top: -35rpx;
+			width:610rpx; 
+			text-align: center;
+			color:white;
+			font-weight: bold; 
+		}
+		.item{
+			position: relative; 
+			.uni-badge-left-margin{
+				position:absolute;
+				top: -19rpx;
+				right:-15rpx;
+				z-index:10; 
+				color:white;
+			} 
+		}   
+	}
+	
+	.common-function__item {
+	
+	    justify-content: center;
+	    align-items: center;
+	    flex-flow: wrap column; 
+	    text-align: center;
+	
+	}
+	
+	.common-function__img {
+	    width: 90rpx;
+	    height: 90rpx; 
+	    border-radius: 10rpx;
+	}
+	
+	.fct-content {
+	    font-weight: bold;
+	    font-size: 12px;
+	    line-height: 28rpx; 
+	    align-items: center;
+	    color: #FF9700;  
+	    padding-top: 10rpx;
+	    text-align: center; 
+	}
+	
+	.sectionnumber{
+		display: flex;
+		.leftmoney{
+			margin-top:3rpx;
+			.backlog{
+				background-color: #d81e06;
+				border-radius: 40rpx;
+				padding:0 15rpx;
+				border:1px solid white;
+				color:white;
+			}
+		}
+		.money{
+			color:$base-color;
+			font-weight: bold;
+		}
+		.countnumer{
+			background-color:$uni-color-error;
+			color:white;
+			border-radius: 50rpx;
+			min-width: 120rpx;
+			text-align: center;
+			border: 1px solid $border-color-base;
+			box-shadow: 0px 0px 5px $border-color-base;
+		}
+	}
+	.sectiontxt{
+		line-height: 118rpx; 
+		height: 118rpx;  
+		position: absolute;
+		left: 120rpx;
+	}  
+	#MyAccount {
+		overflow-x: hidden;
+
+		.wall {
+			height: 360rpx;
+			position: relative;
+			background: #fff;
+
+			.record {
+				margin-top: 80upx;
+				margin-left: 20upx;
+				font-size: 35upx;
+				position: relative;
+			}
+
+			.header {
+				padding-left: 30upx; 
+				/* #ifndef MP-WEIXIN */
+				padding-top: 55rpx;
+				/* #endif */
+
+				.milage {
+					text-align: left;
+					font-size: 30upx;
+					border-bottom: 10upx solid #DF5000;
+					width: 140rpx;
+				}
+
+				.header-level2 {
+					display: flex;
+
+					.top-left {
+						.total {
+							display: flex;
+							// flex-wrap: wrap;
+							padding-top: 16rpx;
+
+							.number {
+								font-size: 44px;
+								letter-spacing: -10upx;
+								line-height: 100rpx;
+							}
+
+							.kilometers {
+								font-size: 16px;
+								padding-left: 8upx;
+								padding-top: 40rpx;
+								color:$font-color-light;
+							}
+						}
+					}
+
+					.top-right {
+						position: absolute;
+						right: 35rpx;
+
+						display: flex;
+						height: 110rpx;
+
+						.showrank {
+							padding: 0 10upx;
+							padding-top: 8upx;
+							background-color: #4D4D4D;
+							width: 220upx;
+							height: 110upx;
+							color: #FFFFFF;
+							text-align: center; 
+							.name {
+								display: inline-block;
+								position: relative;
+								padding-top: 10rpx; 
+							} 
+							.num {
+								line-height: 40rpx;
+								
+								font-weight: bold;
+							}
+						}
+
+						.look {
+							padding: 0 0upx;
+							display: flex;
+							flex-direction: column;
+							background-color: #DF5000;
+							height: 110upx;
+							width: 220upx;
+							text-align: center;
+							color: #FFFFFF; 
+							.num {
+								line-height: 40rpx;
+								padding-top: 10rpx;
+								font-weight: bold;
+							}
+
+							.lookrank {
+								color: #FFFFFF;
+								display: flex; 
+								width:100%; 
+								.collectex{ 
+								    margin-left: 35rpx;
+									 margin-top:10rpx;
+								}  
+							}
+						}
+					}
+				}
+
+			}
+
+			.wall-top {
+				display: flex;
+				position: absolute;
+				z-index: 2;
+				left: 25rpx;
+				/* #ifdef MP-WEIXIN */
+				top: 200rpx;
+				/* #endif*/
+				/* #ifdef APP-PLUS */
+				top: 290rpx;
+				/*#endif */
+				font-size: 32upx; 
+				.img {
+					position: relative;
+					left: 0rpx;
+					width: 130rpx;
+					height: 130rpx;
+					border-radius: 50%;
+					
+					box-shadow: 1px 1px 2px #F2F2F2;
+					border: 1.5px solid #F2F2F2;
+				}
+                .scan{ 
+					margin-right:25rpx; 
+					text-align: center; 
+					color: #848689; 
+					position: relative;
+					top:-35rpx;
+					.icon{
+						width: 100rpx;
+					    height: 100rpx;
+						border-radius: 15rpx;
+					}
+					.scantxt{
+						font-weight: bold;
+						color:$font-color-base;
+					}
+				}
+				.top {
+					padding-top: 12upx;
+					
+					color: #848689;
+					width: 440rpx; 
+					margin-left:25rpx;
+					.information {
+						display: flex; 
+						image {
+							width: 33rpx;
+							height: 33rpx; 
+							z-index: 2;
+						} 
+						.username {
+							position: relative;
+							left: 15rpx; 
+						}
+						 .rolename{
+							background-color: $base-color;
+							color:white;
+							border-radius: 20rpx;
+							height: 40rpx;
+							width: 180rpx;
+							text-align: center;
+							margin-left: 25rpx;
+						}
+					}
+
+					.position {
+						display: flex;
+						margin-top: 24rpx; 
+						image {
+							width: 33rpx;
+							height: 33rpx; 
+							z-index: 2;
+							padding-top: 5rpx;
+						}
+
+						.address {
+							font-size: 14px;
+							display: flex;
+							position: relative;
+							// padding-top: 5rpx;
+							left: 15rpx; 
+							
+							.communityname{  
+							    max-width:230rpx; 
+								overflow: hidden;
+								text-overflow:ellipsis;
+								white-space:nowrap;
+								font-weight: bold;
+					         	color:$font-color-base;
+							}
+							.rolename{
+								background-color: $base-color;
+								color:white;
+								border-radius: 20rpx;
+								height: 40rpx;
+								width: 120rpx;
+								text-align: center;
+								margin-left: 25rpx;
+							}
+						}
+					}
+				}
+			}
+		}  
+		.content {
+			position: relative; 
+			/* #ifdef APP-PLUS */
+			margin-top: 45rpx;
+			/* #endif  */
+			.section {
+				padding: 0 42rpx;
+				height: 118upx; 
+				display: flex;
+				align-items: center;
+				justify-content: space-between; 
+				// border-bottom: 2.083upx solid #c8c8cc;
+				&>view:nth-child(1) {
+
+					// font-weight: bold;
+					.icon {
+						margin-top: 10rpx;
+						width: 60.5upx;
+						height: 60.5upx;
+						border-radius: 15rpx;;
+						display: inline-block; 
+					}
+				} 
+				&>view:nth-child(2) {
+					color: #c8c8cc;
+					display: flex;
+					align-items: center;
+				}
+			}
+
+			.section2 {
+				padding: 0 41.666upx;
+				height: 118upx;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				// border-bottom: 2.083upx solid #c8c8cc;
+				&>view:nth-child(1) {
+
+					// font-weight: bold;
+					.icon {
+						width: 60.5upx;
+						height: 60.5upx;
+						display: inline-block;
+						margin-right: 37.5upx;
+					}
+				}
+
+				&>view:nth-child(2) {
+					position: relative;
+					white-space: nowrap; 
+					.unreadnum {
+						position: absolute;
+						display: inline-block;
+						background-color: #DF5000;
+						color: #fff;
+						text-align: center;
+						font-size: 22rpx;
+						min-height: 34rpx;
+						min-width: 34rpx;
+						padding: 0 6rpx;
+						border-radius: 50rpx;
+						top: -15rpx;
+						left: 150rpx;
+						transform: scale(0.8) translateX(60%);
+						transform-origin: center center;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+
+				&>view:nth-child(3) {
+					color: #c8c8cc;
+					display: flex;
+					align-items: center;
+				}
+			}
+
+			.profile {
+				padding: 0 31.25rpx;
+				width: 100%;
+				display: flex;
+				align-items: flex-end; 
+				image {
+					width: 125rpx;
+					height: 125rpx;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.foot {
+			padding-top: 40upx; 
+			color: black;
+			font-size: 25upx;
+			display: flex;
+			justify-content: center;
+			
+		}
+		.company{
+			margin-bottom: 50rpx;;
+		}
+        
+	}
+ 
