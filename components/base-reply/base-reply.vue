@@ -1,5 +1,5 @@
 <template>
-	<view class="base-reply">
+	<cover-view class="base-reply">
 		<uni-easyinput type="text" :inputBorder="false" placeholder="Say something..."></uni-easyinput>
 		<view class="btn-wrap">
 			<view class="reply-btn">
@@ -21,7 +21,7 @@
 				</view>
 			</view>
 		</view>
-	</view>
+	</cover-view> 
 </template>
 
 <script>
@@ -45,17 +45,14 @@
 		box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1), 0px -2px 4px -2px rgba(0, 0, 0, 0.15);
 		display: flex;
 		align-items: center;
-		::v-deep .uni-easyinput {
-			
-			.uni-easyinput__content{
-				background-color: #FAFAFA!important;
-				backdrop-filter: blur(40px);
-				border-radius: 40rpx;
-				width: 360rpx;
-				height: 80upx;
-			}
-		}
-		padding: 0 40rpx;
+		::v-deep .uni-easyinput .uni-easyinput__content-input{
+					background-color: #FAFAFA!important;
+					backdrop-filter: blur(40px);
+					border-radius: 40rpx;
+					width: 360rpx;
+					height: 80upx;
+				}
+		padding: 20upx 40upx;
 		background-color: #fff;
 		.btn-wrap{
 			margin-left: 52rpx;
