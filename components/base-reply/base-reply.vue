@@ -1,5 +1,5 @@
 <template>
-	<cover-view class="base-reply">
+	<cover-view :class="['base-reply',isDark?'dark--type':'']">
 		<uni-easyinput type="text" :inputBorder="false" placeholder="Say something..."></uni-easyinput>
 		<view class="btn-wrap">
 			<view class="reply-btn">
@@ -21,12 +21,13 @@
 				</view>
 			</view>
 		</view>
-	</cover-view> 
+	</cover-view>
 </template>
 
 <script>
 	export default {
 		name: "BaseReply",
+		props: ['isDark'], // 暗色风格
 		data() {
 			return {
 
@@ -45,42 +46,71 @@
 		box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1), 0px -2px 4px -2px rgba(0, 0, 0, 0.15);
 		display: flex;
 		align-items: center;
-		::v-deep .uni-easyinput .uni-easyinput__content-input{
-					background-color: #FAFAFA!important;
-					backdrop-filter: blur(40px);
-					border-radius: 40rpx;
-					width: 360rpx;
-					height: 80upx;
-				}
+
+		&.dark--type {
+			background: rgba(255, 255, 255, 0.1);
+			box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1), 0px -2px 4px -2px rgba(0, 0, 0, 0.15);
+		::v-deep .uni-easyinput {
+			background-color: transparent;
+			.uni-easyinput__content {
+				background-color: #FAFAFA !important;
+				backdrop-filter: blur(40px);
+				border-radius: 40rpx;
+				width: 360rpx;
+				height: 80upx;
+			}
+		}
+		
+		}
+
+
+
+		::v-deep .uni-easyinput {
+			background-color: transparent;
+
+			.uni-easyinput__content {
+				background-color: #FAFAFA !important;
+				backdrop-filter: blur(40px);
+				border-radius: 40rpx;
+				width: 360rpx;
+				height: 80upx;
+			}
+		}
+
 		padding: 20upx 40upx;
 		background-color: #fff;
-		.btn-wrap{
+
+		.btn-wrap {
 			margin-left: 52rpx;
 			display: flex;
 		}
-		.reply-btn{
+
+		.reply-btn {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			&+.reply-btn{
+
+			&+.reply-btn {
 				margin-left: 50rpx;
 			}
-			.reply-btn-icon{
+
+			.reply-btn-icon {
 				width: 40upx;
 				height: 40upx;
 			}
-			.reply-btn-text{
+
+			.reply-btn-text {
 				letter-spacing: -0.03em;
-				
+
 				/* linear green */
-				
+
 				background: linear-gradient(180deg, #4B9A87 0.66%, #6ADEC3 100%);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;
 				text-fill-color: transparent;
 			}
-			
+
 		}
 	}
 </style>

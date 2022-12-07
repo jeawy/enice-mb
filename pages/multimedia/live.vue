@@ -28,7 +28,7 @@
 		</cover-view>
 		<live-player src="https://domain/pull_stream" class="live-player" autoplay @statechange="statechange"
 			@error="error" />
-		<base-reply />
+		<base-reply isDark/>
 	</view>
 </template>
 
@@ -54,11 +54,6 @@
 	.live-page {
 		position: relative;
 		height: 100vh;
-		
-		.base-reply{
-			background: rgba(255, 255, 255, 0.1);
-			box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1), 0px -2px 4px -2px rgba(0, 0, 0, 0.15);
-		}
 		
 		.join-people{
 			position: fixed;

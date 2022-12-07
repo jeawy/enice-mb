@@ -1,25 +1,24 @@
 {
-	"pages": [
-		{
+	"pages": [{
 			"path": "pages/entry/index",
 			"style": {
 				"navigationStyle": "custom"
 			}
-		
+
 		}, {
 			"path": "pages/search-panel/search-panel",
 			"style": {
 				"navigationBarTitleText": "Search",
 				"enablePullDownRefresh": false
 			}
-		
+
 		}, {
 			"path": "pages/search-panel/search-reasult",
 			"style": {
 				"navigationBarTitleText": "Results",
 				"enablePullDownRefresh": false
 			}
-		
+
 		}, {
 			"path": "pages/topic/topic-list",
 			"style": {
@@ -27,7 +26,7 @@
 				"enablePullDownRefresh": false,
 				"backgroundColor": "#ffffff"
 			}
-		
+
 		}, {
 			"path": "pages/topic/topic-notes",
 			"style": {
@@ -35,7 +34,7 @@
 				"enablePullDownRefresh": false,
 				"backgroundColor": "#ffffff"
 			}
-		
+
 		}, {
 			"path": "pages/article-page/article-page",
 			"style": {
@@ -43,26 +42,23 @@
 				"enablePullDownRefresh": false,
 				"backgroundColor": "#ffffff"
 			}
-		
-		}
-		,{
-		    "path" : "pages/multimedia/live",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false,
+
+		}, {
+			"path": "pages/multimedia/live",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
 				"backgroundColor": "#ffffff"
-		    }
-		    
-		}
-		,{
-		    "path" : "pages/multimedia/record",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false,
+			}
+
+		}, {
+			"path": "pages/multimedia/record",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
 				"backgroundColor": "#ffffff"
-		    }
+			}
 		},
 		{
 			"path": "pages/index/index",
@@ -434,7 +430,7 @@
 			}
 
 		}
-    ],
+	],
 	"subPackages": [ //分包
 		{
 			"root": "pages/collection",
