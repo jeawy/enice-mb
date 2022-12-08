@@ -11,6 +11,10 @@
 				<view class="follower">45k followers</view>
 			</view>
 			<button class="follow-btn">Follow</button>
+			<view class="empty">
+				
+			</view>
+			<image class="start-icon" src="/static/img/Star.svg" mode=""></image>
 		</cover-view>
 		<cover-view class="join-people">
 			<view class="user-profile-wrap">
@@ -28,7 +32,7 @@
 		</cover-view>
 		<live-player src="https://domain/pull_stream" class="live-player" autoplay @statechange="statechange"
 			@error="error" />
-		<base-reply isDark/>
+		<base-reply isDark />
 	</view>
 </template>
 
@@ -54,8 +58,8 @@
 	.live-page {
 		position: relative;
 		height: 100vh;
-		
-		.join-people{
+
+		.join-people {
 			position: fixed;
 			bottom: 152upx;
 			left: 50%;
@@ -63,17 +67,20 @@
 			z-index: 11;
 			display: flex;
 			align-items: center;
-			.user-profile-wrap{
+
+			.user-profile-wrap {
 				height: 80upx;
 				margin-right: -28upx;
-				.user-profile{
+
+				.user-profile {
 					width: 80upx;
 					height: 80upx;
 					border-radius: 40upx;
 					display: block;
 				}
 			}
-			.people-count{
+
+			.people-count {
 				flex: 0 0 auto;
 				background: linear-gradient(180deg, #4B9A87 0.66%, #6ADEC3 100%);
 				height: 76upx;
@@ -97,19 +104,31 @@
 			align-items: center;
 			padding: 0 40upx;
 
+			.start-icon {
+				width: 56upx;
+				height: 56upx;
+			}
+
+			.empty {
+				flex: 1;
+			}
+
 
 			.user-name {
 				color: #FFFFFF;
 				font-weight: 500;
-				font-size: 28upx;line-height: 40upx;
-				margin:0 14upx;
-				.follower{
+				font-size: 28upx;
+				line-height: 40upx;
+				margin: 0 14upx;
+
+				.follower {
 					color: #CCCCCC;
 					font-size: 10px;
 					line-height: 32upx;
-					
+
 				}
 			}
+
 			.follow-btn {
 				height: 38upx;
 				padding: 0 7upx;

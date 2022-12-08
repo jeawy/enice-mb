@@ -7,14 +7,14 @@
 
 		<!-- 这里是顶部状态栏 -->
 		<view class="status_bar" />
-		<!-- <component :is="['HomePage','NewsPage'][active]" /> -->
+		<component :is="['HomePage','NewsPage'][active]" />
 
 	</scroll-view>
 </template>
 
 <script>
 	import HomePage from '../home/home.vue'
-	import NewsPage from './news.vue'
+	import NewsPage from '@/pages/news-page/news.vue'
 	export default {
 		components: {
 			HomePage,
