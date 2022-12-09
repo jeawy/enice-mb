@@ -9,7 +9,7 @@
 			<uni-icons class="del-icon" type="trash-filled" size="16" color="#999"></uni-icons>
 		</view>
 		<view class="tag-wrap tag-wrap1">
-			<view class="tag-item" @click="onSearch">
+			<view class="tag-item" @tap="onSearch">
 				Enice
 			</view>
 			<view class="tag-item">
@@ -26,7 +26,7 @@
 			Discover
 		</view>
 		<view class="tag-wrap">
-			<view class="tag-item" @click="onSearch">
+			<view class="tag-item" @tap="onSearch">
 				Enice
 			</view>
 			<view class="tag-item">
@@ -49,10 +49,12 @@
 
 			};
 		},
-		onSearch(){
-			uni.navigateTo({
-				url:'/pages/search-panel/search-reasult'
-			})
+		methods: {
+			onSearch(){
+				uni.navigateTo({
+					url:'/pages/search-panel/search-reasult'
+				})
+			}
 		}
 	}
 </script>

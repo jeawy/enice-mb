@@ -14,13 +14,7 @@
 			<swiper class="swiper" circular indicator-dots :duration="500" autoplay>
 				<swiper-item class="swiper-item">
 					<image class="swiper-item-image" src="/static/img/home/1.png">A</image>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item uni-bg-green">B</view>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item uni-bg-blue">C</view>
-				</swiper-item>
+				</swiper-item> 
 			</swiper>
 		</view>
 
