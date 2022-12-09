@@ -101,7 +101,10 @@
                     }
                 },
                 "push" : {
-                    "unipush" : {}
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : false
+                    }
                 },
                 "share" : {
                     "weixin" : {

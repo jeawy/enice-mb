@@ -29,7 +29,7 @@
 			<uni-icons type="bottom" color="#333333" size="14"></uni-icons>
 		</view>
 		<base-card :data="card1"></base-card>
-		<base-card :data="card2"></base-card>
+		<base-card :data="card2" ></base-card>
 	</view>
 </template>
 

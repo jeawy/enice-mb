@@ -1,5 +1,5 @@
 <template>
-	<cover-view :class="['base-reply',isDark?'dark--type':'']">
+	<view class="base-reply">
 		<uni-easyinput type="text" :inputBorder="false" placeholder="Say something..."></uni-easyinput>
 		<view class="btn-wrap">
 			<view class="reply-btn">
@@ -8,20 +8,20 @@
 					Share
 				</view>
 			</view>
-			<view class="reply-btn">
+			<view class="reply-btn" >
 				<image class="reply-btn-icon" src="/static/img/commonticon.svg" mode="aspectFit"></image>
 				<view class="reply-btn-text">
-					133
+					{{recommend_count}}
 				</view>
 			</view>
-			<view class="reply-btn">
+			<view class="reply-btn" @tap="addLike">
 				<image class="reply-btn-icon" src="/static/img/likeicon.svg" mode="aspectFit"></image>
 				<view class="reply-btn-text">
-					2.9k
+					{{like_count}}
 				</view>
 			</view>
 		</view>
-	</cover-view>
+	</view>
 </template>
 
 <script>
@@ -30,8 +30,15 @@
 		props: ['isDark'], // 暗色风格
 		data() {
 			return {
+				recommend_count:133,
+				like_count:2
 
 			};
+		},
+		methods:{
+			addLike(){
+				this.like_count +=1;
+			}
 		}
 	}
 </script>
@@ -39,7 +46,7 @@
 <style lang="scss">
 	.base-reply {
 		position: fixed;
-		bottom: 0;
+		bottom: 0rpx;
 		width: 100%;
 		left: 0;
 		min-height: var(--replay-height);

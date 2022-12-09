@@ -4,10 +4,10 @@
 			<!-- 这里是状态栏 -->
 		</view>
 		<view class="article-page__user">
-			<uni-icons type="back" size="14"></uni-icons>
+			<uni-icons type="back" size="14" @tap="gotoback"></uni-icons>
 			<image class="user-profile" :src="profile" mode="aspectFit"></image>
 			<view class="user-name">Abbey</view>
-			<button class="follow-btn">Follow</button>
+			<button class="follow-btn" @tap="actionFollow">{{follow}}</button>
 		</view>
 
 
@@ -55,43 +55,26 @@
 			Comments
 		</view>
 
-		<view class="reply-item">
-			<image class="reply-item-profile" :src="profile" mode="aspectFit"></image>
+		<view class="reply-item" v-for="(item, index) of comments" :key="index">
+			<image class="reply-item-profile" :src="profile" mode="aspectFit" ></image>
 
 			<view class="reply-item-user">
 				<view class="reply-user-name">
-					Margaret
+					{{item.username}}
 				</view>
 				<view class="reply-content">
-					The bed was nice and comfortable, the service was on point. Good job!
+					{{item.comments}}
 				</view>
 			</view>
 			<view class="reply-info">
 				<view class="reply-date">
-					11 May 21
+					{{item.date}}
 				</view>
 				<image class="like-icon" src="/static/img/likeicon.svg" mode="aspectFit"></image>
 			</view>
 		</view>
-		<view class="reply-item">
-			<image class="reply-item-profile" :src="profile" mode="aspectFit"></image>
-
-			<view class="reply-item-user">
-				<view class="reply-user-name">
-					Margaret
-				</view>
-				<view class="reply-content">
-					The bed was nice and comfortable, the service was on point. Good job!
-				</view>
-			</view>
-			<view class="reply-info">
-				<view class="reply-date">
-					11 May 21
-				</view>
-				<image class="like-icon" src="/static/img/likeicon.svg" mode="aspectFit"></image>
-			</view>
-		</view>
-		<view class="view-more">
+		 
+		<view class="view-more" @tap="AddMoreComments">
 			See more reviews...
 		</view>
 
@@ -101,17 +84,11 @@
 		<view class="car-home-swiper">
 			<swiper class="swiper" circular indicator-dots :duration="500" autoplay>
 				<swiper-item class="swiper-item">
-					<image class="swiper-item-image" src="/static/img/home/1.png">A</image>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item uni-bg-green">B</view>
-				</swiper-item>
-				<swiper-item>
-					<view class="swiper-item uni-bg-blue">C</view>
-				</swiper-item>
+					<image class="swiper-item-image" src="/static/img/home/recommend.png">A</image>
+				</swiper-item> 
 			</swiper>
 		</view>
-		<base-reply />
+		<base-reply :isDark="false" />
 	</view>
 </template>
 
@@ -119,6 +96,7 @@
 	export default {
 		data() {
 			return {
+				follow:"follow",
 				profile: 'https://ts1.cn.mm.bing.net/th/id/R-C.5961f13c1c8c3b09c0ad702a7094dc6c?rik=a4l5Ss31eNoXow&riu=http%3a%2f%2fimg.crcz.com%2fallimg%2f201907%2f23%2f1563882699417666.jpg&ehk=hvM%2bq7ZrtSwhXpwGa3hlcCuFmJdcH2SOpoB6whfimEY%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
 				current: 0,
 				mode: 'default',
@@ -129,6 +107,18 @@
 					selectedBackgroundColor: '#CCC',
 					selectedBorder: '0'
 				},
+				comments:[
+					{
+						username:"Margaret",
+						comments:"The bed was nice and comfortable, the service was on point. Good job!",
+						date:"11 May 21"
+					},
+					{
+						username:"Margaret",
+						comments:"The bed was nice and comfortable, the service was on point. Good job!",
+						date:"11 May 21"
+					}
+				],
 				swiperDotIndex: 0,
 				info: [{
 						colorClass: 'uni-bg-red',
@@ -149,6 +139,21 @@
 			};
 		},
 		methods: {
+			gotoback(){
+				uni.navigateBack();
+			},
+			actionFollow(){
+				this.follow = "followed"
+			},
+			AddMoreComments(){
+				let newitem = {
+						username:"Margaret",
+						comments:"The bed was nice and comfortable, the service was on point. Good job!",
+						date:"11 May 21"
+					}
+					this.comments = this.comments.concat(newitem)
+
+			},
 			change(e) {
 				this.current = e.detail.current
 			},
@@ -191,7 +196,7 @@
 			padding: 28upx 0 34upx;
 
 			&+.reply-item {
-				border-top: 2rpx solid #F4F2F6;
+				border-top: 2px solid #F4F2F6;
 			}
 
 			.reply-item-user {

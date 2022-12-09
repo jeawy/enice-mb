@@ -1,6 +1,6 @@
 <!-- 通用卡片 Enice -->
 <template>
-	<view class="base-card" :style="{backgroundImage:`url(${data.img})`}">
+	<view class="base-card" @tap="gotoArticle" :style="{backgroundImage:`url(${data.img})`}">
 		<view class="card__header">
 			{{data.title}}
 		</view>
@@ -28,6 +28,13 @@
 			return {
 
 			};
+		},
+		methods:{
+			gotoArticle(){
+				uni.navigateTo({
+					url: '/pages/article-page/article-page'
+				});
+			}
 		}
 	}
 </script>
