@@ -103,6 +103,19 @@
             }  
         },
         {
+            "path": "pages/article-page/brand-model-page",
+            "style": {
+                "navigationBarTitleText": "Model 3", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }  
+        },
+        {
             "path": "pages/article-page/configuration-page",
             "style": {
                 "navigationBarTitleText": "Configuration", 

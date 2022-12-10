@@ -4,7 +4,7 @@
 		<view class="search-panel__header" v-for="(item, index) of brands" :key="index">
 			<view class="title">{{item.title}}</view>
 			<view class="brandcontainer">
-				<view class="items"  v-for="(itembrand, brandindex) of item.items" :key="brandindex">
+				<view class="items" @tap="gotoBrand(brandindex)" v-for="(itembrand, brandindex) of item.items" :key="brandindex">
 					<checkbox class="checkbox" value="cb" color="#FFCC33" style="transform:scale(0.7)" /> 
 					<view class="item">{{itembrand.name}}</view>
 				</view>
@@ -42,9 +42,9 @@
 			};
 		},
 		methods: {
-			onSearch(){
+			gotoBrand(brandindex){
 				uni.navigateTo({
-					url:'/pages/search-panel/search-reasult'
+					url:'/pages/article-page/brand-model-page'
 				})
 			}
 		}
