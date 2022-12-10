@@ -90,6 +90,19 @@
             }  
         },
         {
+            "path": "pages/article-page/hot-page",
+            "style": {
+                "navigationBarTitleText": "Hot", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }  
+        },
+        {
             "path": "pages/article-page/brand-page",
             "style": {
                 "navigationBarTitleText": "Volvo EC", 
@@ -119,6 +132,19 @@
             "path": "pages/article-page/configuration-page",
             "style": {
                 "navigationBarTitleText": "Configuration", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }  
+        },
+        {
+            "path": "pages/article-page/review-page",
+            "style": {
+                "navigationBarTitleText": "Review", 
                 "enablePullDownRefresh": false,
                 "backgroundColor": "#ffffff",
                 "app-plus": {
