@@ -5,14 +5,44 @@
                 "navigationStyle": "custom"
             }
 
-        }, {
+        }, 
+        {
             "path": "pages/search-panel/search-panel",
             "style": {
                 "navigationBarTitleText": "Search",
                 "enablePullDownRefresh": false
             }
 
-        }, {
+        },
+        {
+            "path": "pages/search-panel/brand-search-panel",
+            "style": {
+                "navigationBarTitleText": "Brand", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+
+        },
+        {
+            "path": "pages/search-panel/brand-search-result",
+            "style": {
+                "navigationBarTitleText": "Brand", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+
+        },
+         {
             "path": "pages/search-panel/search-reasult",
             "style": {
                 "navigationBarTitleText": "Results",

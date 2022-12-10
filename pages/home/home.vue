@@ -64,7 +64,7 @@
 			},
 			focus(e) {
 				uni.navigateTo({
-					url: '/pages/search-panel/search-panel'
+					url: '/pages/search-panel/brand-search-panel'
 				});
 			},
 		}
