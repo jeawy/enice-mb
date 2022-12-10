@@ -141,6 +141,19 @@
                 }
             }  
         },
+        {
+            "path": "pages/article-page/compare-result",
+            "style": {
+                "navigationBarTitleText": "Comparision", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }  
+        },
 		{
             "path": "pages/multimedia/live",
             "style": {

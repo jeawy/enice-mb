@@ -48,7 +48,7 @@
 			</view>
 		</view>
 
-		<button class=" follow-btn-disabled"  >Compare</button>
+		<button class=" follow-btn-disabled" @tap="gotoCompare"  >Compare</button>
 	</view>
 </template>
 
@@ -87,7 +87,11 @@
 			};
 		},
 		methods: { 
-		   
+			gotoCompare(){
+				uni.navigateTo({
+					url:'/pages/article-page/compare-result'
+				})
+			},
 			clickItem(e) {
 				this.swiperDotIndex = e
 			},
