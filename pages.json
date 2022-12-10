@@ -431,7 +431,16 @@
 			}
 
 		}
-	],
+        ,{
+            "path" : "pages/news-page/upcoming",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Upcoming",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"subPackages": [ //分包
 		{
 			"root": "pages/collection",
