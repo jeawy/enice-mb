@@ -199,6 +199,15 @@
             }
         },
         {
+            "path" : "pages/news-page/upcoming",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Upcoming",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+        {
             "path": "pages/index/index",
             "style": {
                 "backgroundColor": "#FFFFFF",
