@@ -6,7 +6,7 @@
 				<view>Mobile</view>
 				<view> 61-452323423</view>
 			</view> 
-			<view class="settingList" @tap="target('/pages/user/user-agreement/user-agreement')">
+			<view class="settingList" @tap="target('/pages/user/user-agreement/password')">
 				<view>Password</view>
 				<view>
 					Set<uniIcon type="arrowright"></uniIcon>

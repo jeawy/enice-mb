@@ -569,7 +569,14 @@
                 "enablePullDownRefresh": false
             }
 
-        }, {
+        },  {
+            "path": "pages/user/user-agreement/password",
+            "style": {
+                "navigationBarTitleText": "Set Password",
+                "enablePullDownRefresh": false
+            }
+
+        },{
             "path": "pages/user/privacy-agreement/privacy-agreement",
             "style": {
                 "navigationBarTitleText": "隐私协议",
