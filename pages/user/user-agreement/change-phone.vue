@@ -2,18 +2,26 @@
 	<!-- 设置界面 -->
 	<view>
 		<view  id="setting">
-			<view class="settingList" @tap="target('/pages/user/user-agreement/linkmobile')">
-				<view>Mobile</view>
-				<view> 61-452323423</view>
+			<view class="settingList"  >
+				<view class="title">After changing, you can log in with the new number. Current Number:</view> 
 			</view> 
-			<view class="settingList" @tap="target('/pages/user/user-agreement/password')">
-				<view>Password</view>
+			<view class="settingList"  >
+				<view>+61 452323423</view>
+				<view><button class="verify-btn default-btn"  @tap="Done" >Verify</button></view>
+			</view> 
+			<view  class="password-form"  >
+				<view>Vertification Code</view>
 				<view>
-					Set<uniIcon type="arrowright"></uniIcon>
+					<input
+					    type="text"
+						class="password default-input"
+						v-model="Info.oldpassword" 
+					/>
 				</view>
 			</view>  
+			 
 		</view>
-		<button class="logout-btn default-btn"  >Delete Account</button>
+		<button class="done-btn default-btn"  @tap="Done('/pages/user/user-agreement/new-phone')" >Next</button>
 	</view>
 </template>
 
@@ -22,13 +30,14 @@
 	export default {
 		data() {
 			return {
-				thumbnail_portait: '',
-				url:'',
-				Image:[],
-				portait:'',
-				clickImage:false,
-				ios: true,
-				phone:""
+			 
+				Info:{
+					oldpassword:"",
+					newpassword:"",
+					newpassword1:""
+				},
+			 
+				 
 			};
 		},
 		computed: {
@@ -41,10 +50,10 @@
 		},
 		methods: { 
 			   
-			target(url) {
+			Done(url) {
 				uni.navigateTo({
 					url
-				})
+				})  
 			}, 
 		}, 
 	};
@@ -52,36 +61,41 @@
 
 <style lang="scss" scoped>
 	 
-	.logout-btn{
-		background: white;
-		color:#666666;
+	.done-btn{
         width: 700rpx;
 		margin-left: 25rpx;
 		margin-top: 50rpx;
 		font-size: 20px;
 		line-height:  90rpx;
 		height: 90rpx;
-		border-radius: 45rpx;  
+		position: fixed;
+		bottom: 120rpx;;
+		border-radius: 45rpx;
 	}
 	#setting {
 		background: #FFFFFF;
 		width:700rpx;
-		height: 210rpx;
-		padding:15rpx 50rpx;
+		color:#666666;
+		height: 700rpx;
+		padding:25rpx 50rpx;
 		margin-top: 25rpx;
 		margin-left: 25rpx;
-		overflow: hidden;
-		color:#666666;
 		box-shadow: 0px 32px 64px rgba(217, 217, 217, 0.36);
 		border-radius: 40rpx;
+		.title{
+			color: #000000;
+			font-weight: 700;
+		}
+		.password-form{
+			margin-top: 35rpx; 
+		}
+	
 		.settingList {
 			background-color: #FFFFFF;
 			height: 100rpx;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
-			border-bottom: 1px solid #CCCCCC;
-
+			justify-content: space-between; 
 			&>view:nth-child(1) {
 				display: flex;
 				align-items: center;
@@ -92,16 +106,6 @@
 				display: flex;
 				align-items: center;
 			} 
-		}
-
-		.settingList1 { 
-			font-weight: 500;
-			line-height: 118rpx;
-			background-color: white;
-			border-bottom: 1px solid #CCCCCC;
-			text-align: center; 
-			align-items: center;
-			justify-content: center;
 		} 
 	}
 </style>

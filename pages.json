@@ -576,6 +576,27 @@
                 "enablePullDownRefresh": false
             }
 
+        },  {
+            "path": "pages/user/user-agreement/linkmobile",
+            "style": {
+                "navigationBarTitleText": "Link Mobile",
+                "enablePullDownRefresh": false
+            }
+
+        }, {
+            "path": "pages/user/user-agreement/change-phone",
+            "style": {
+                "navigationBarTitleText": "Change Mobile",
+                "enablePullDownRefresh": false
+            }
+
+        }, {
+            "path": "pages/user/user-agreement/new-phone",
+            "style": {
+                "navigationBarTitleText": "Link Mobile",
+                "enablePullDownRefresh": false
+            }
+
         },{
             "path": "pages/user/privacy-agreement/privacy-agreement",
             "style": {
