@@ -3,11 +3,10 @@
 <template>
 	<scroll-view scroll-y class="entry-container">
 		<!-- 底部tabbar -->
-		<custum-tab-bar @tabChange="onTabChange" />
-
+		<custum-tab-bar @tabChange="onTabChange" /> 
 		<!-- 这里是顶部状态栏 -->
 		<view class="status_bar" />
-		<component :is="['HomePage','NewsPage'][active]" />
+		<component :is="['HomePage','NewsPage', 'User'][active]" />
 
 	</scroll-view>
 </template>
@@ -15,10 +14,12 @@
 <script>
 	import HomePage from '../home/home.vue'
 	import NewsPage from '@/pages/news-page/news.vue'
+	import User from '@/pages/user/user.vue'
 	export default {
 		components: {
 			HomePage,
-			NewsPage
+			NewsPage,
+			User
 		},
 		data() {
 			return {

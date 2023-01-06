@@ -1,6 +1,6 @@
 
 <template>
-	<web-view :src="baseAppUrl+'/hybrid/html/agreement.html'"></web-view>
+	<web-view :src="baseAppUrl+'/hybrid/html/enice-privacy.html'"></web-view>
 </template>
 <script>
 export default {

@@ -101,7 +101,7 @@
                     "bounce": "none"
                 }
             }  
-        },
+        }, 
         {
             "path": "pages/article-page/brand-page",
             "style": {
@@ -413,7 +413,7 @@
         {
             "path": "pages/user/settings",
             "style": {
-                "navigationBarTitleText": "设置",
+                "navigationBarTitleText": "Settings",
                 "app-plus": {
                     "bounce": "none",
                     "titleNView": true
@@ -423,7 +423,7 @@
         {
             "path": "pages/user/potocol",
             "style": {
-                "navigationBarTitleText": "平台协议",
+                "navigationBarTitleText": "Settings",
                 "app-plus": {
                     "bounce": "none",
                     "titleNView": true
@@ -559,6 +559,13 @@
             "path": "pages/user/user-agreement/user-agreement",
             "style": {
                 "navigationBarTitleText": "用户服务协议",
+                "enablePullDownRefresh": false
+            }
+
+        }, {
+            "path": "pages/user/user-agreement/account",
+            "style": {
+                "navigationBarTitleText": "Account",
                 "enablePullDownRefresh": false
             }
 

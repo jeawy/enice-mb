@@ -211,7 +211,7 @@
 					<uniIcon type="arrowright"></uniIcon>
 				</view> 
 			</view>
-			<view class="section" @tap="target('/pages/user/settings',true)">
+			<view class="section" @tap="target('/pages/user/settings',false)">
 				<view>
 					<image class="icon" :src="baseAppUrl+`icons/setting.png`"></image>
 					 

@@ -3,19 +3,17 @@
 	<view>
 		<view  id="setting">
 			<view class="settingList" @tap="target('/pages/user/user-agreement/account')">
-				<view>Account</view>
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
+				<view>Mobile</view>
+				<view> 61-452323423</view>
 			</view> 
 			<view class="settingList" @tap="target('/pages/user/user-agreement/user-agreement')">
-				<view>Privacy</view>
+				<view>Password</view>
 				<view>
-					<uniIcon type="arrowright"></uniIcon>
+					Set<uniIcon type="arrowright"></uniIcon>
 				</view>
 			</view>  
 		</view>
-		<button class="logout-btn default-btn"  >Log Out</button>
+		<button class="logout-btn default-btn"  >Delete Account</button>
 	</view>
 </template>
 
@@ -55,27 +53,30 @@
 <style lang="scss" scoped>
 	 
 	.logout-btn{
+		background: white;
+		color:#666666;
         width: 700rpx;
 		margin-left: 25rpx;
 		margin-top: 50rpx;
 		font-size: 20px;
 		line-height:  90rpx;
 		height: 90rpx;
-		border-radius: 45rpx;
+		border-radius: 45rpx;  
 	}
 	#setting {
 		background: #FFFFFF;
 		width:700rpx;
-		color:#666666;
-		height: 400rpx;
-		padding:25rpx 50rpx;
+		height: 210rpx;
+		padding:15rpx 50rpx;
 		margin-top: 25rpx;
 		margin-left: 25rpx;
+		overflow: hidden;
+		color:#666666;
 		box-shadow: 0px 32px 64px rgba(217, 217, 217, 0.36);
 		border-radius: 40rpx;
 		.settingList {
 			background-color: #FFFFFF;
-			height: 130rpx;
+			height: 100rpx;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
