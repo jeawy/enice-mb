@@ -11,7 +11,7 @@
 				<view>
 					<input
 					    type="password"
-						class="password"
+						class="password default-input"
 						v-model="Info.oldpassword" 
 					/>
 				</view>
@@ -21,7 +21,7 @@
 				<view>
 					<input
 					    type="password"
-						class="password"
+						class="password default-input"
 						v-model="Info.newpassword" 
 					/>
 				</view>
@@ -31,7 +31,7 @@
 				<view>
 					<input
 					    type="password"
-						class="password"
+						class="password default-input"
 						v-model="Info.newpassword1" 
 					/>
 				</view>
@@ -138,15 +138,7 @@
 		box-shadow: 0px 32px 64px rgba(217, 217, 217, 0.36);
 		border-radius: 40rpx;
 		.password-form{
-			margin-top: 35rpx;
-			.password{
-				padding-left:25rpx;
-				border: 1px solid #CCCCCC;
-				border-radius: 35rpx;
-				height: 70rpx;
-				line-height: 70rpx;
-			}
-
+			margin-top: 35rpx; 
 		}
 	
 		.settingList {
