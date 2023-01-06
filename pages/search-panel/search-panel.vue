@@ -1,7 +1,7 @@
 <!-- 搜索面板 Enice -->
 <template>
 	<view class="search-panel">
-		<uni-search-bar :radius="30" bgColor="#FAFAFA" cancelButton="none" clearButton="none" placeholder="New Model S">
+		<uni-search-bar :radius="30" @input="onSearch" bgColor="#FAFAFA" cancelButton="none" clearButton="none" placeholder="New Model S">
 		</uni-search-bar>
 
 		<view class="search-panel__header mt46">
@@ -12,13 +12,13 @@
 			<view class="tag-item" @tap="onSearch">
 				Enice
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Tesla model 3 review
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Volvo
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Nissian new car release date
 			</view>
 		</view>
@@ -29,13 +29,13 @@
 			<view class="tag-item" @tap="onSearch">
 				Enice
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Tesla model 3 review
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Volvo
 			</view>
-			<view class="tag-item">
+			<view class="tag-item"  @tap="onSearch">
 				Nissian new car release date
 			</view>
 		</view>

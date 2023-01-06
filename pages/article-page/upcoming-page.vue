@@ -51,7 +51,7 @@
 					</view>
 				</view>
 				<view class="reply-info"> 
-					<button class="follow-btn"  >Compare</button>
+					<button class="follow-btn"  @tap="gotoCompare" >Compare</button>
 				</view>
 			</view>
 			<view class="reply-item"  >
@@ -69,11 +69,11 @@
 					</view>
 				</view>
 				<view class="reply-info"> 
-					<button class="follow-btn"  >Compare</button>
+					<button class="follow-btn" @tap="gotoCompare" >Compare</button>
 				</view>
 			</view>
 		</view>
-        <view class="article article-compare article-review">
+        <view class="article article-compare article-review" @tap="gotoReview" >
 			<view class="title">Test Drive Review</view>
 			<image class="img" src="/static/img/home/car3.png"   ></image>
 			<view class="b-txt">2023 Lexus EC200 Sport Edition Review</view>
@@ -168,6 +168,16 @@
 			};
 		},
 		methods: {
+			gotoReview(){
+				uni.navigateTo({
+					url:'/pages/article-page/review-page'
+				})
+			},
+			gotoCompare(){
+				uni.navigateTo({
+					url:'/pages/article-page/compare-result'
+				})
+			},
 			gotoback(){
 				uni.navigateBack();
 			},

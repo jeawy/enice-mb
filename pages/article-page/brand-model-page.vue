@@ -12,7 +12,7 @@
 							<view class="price">$ 68,000 - 93,000</view> 
 						</view>
 						<view class="item" >
-							<button class="follow-btn"  >Add</button>
+							<button class="follow-btn" @tap="AddCar"  >Add</button>
 						</view>
 					</view>
 				</view>
@@ -31,7 +31,7 @@
 							<view class="price">$ 98,000 - 113,000</view> 
 						</view>
 						<view class="item" >
-							<button class="follow-btn"  >Add</button>
+							<button class="follow-btn" @tap="AddCar"  >Add</button>
 						</view>
 					</view>
 				</view>
@@ -52,7 +52,12 @@
 			clickItem(e) {
 				this.swiperDotIndex = e
 			},
-		}
+			AddCar(){
+				uni.navigateTo({
+					url: '/pages/article-page/compare-page'
+				});
+			}
+		} 
 	}
 </script>
 

@@ -28,13 +28,13 @@
 						Upcoming
 					</view>
 				</view>
-				<view class="brand-card">
+				<view class="brand-card" @click="toUpBrand">
 					<view class="card-text">
 						Brand
 					</view>
 				</view>
 			</view>
-			<view class="hot-card">
+			<view class="hot-card" @click="toUpHot">
 				<view class="card-text">
 					Hot
 				</view>
@@ -68,7 +68,17 @@
 				uni.navigateTo({
 					url:'/pages/news-page/upcoming'
 				})
-			}
+			},
+			toUpBrand(){
+				uni.navigateTo({
+					url:'/pages/search-panel/brand-search-panel'
+				})
+			},
+			toUpHot(){
+				uni.navigateTo({
+					url:'/pages/article-page/hot-page'
+				})
+			},
 		}
 	}
 </script>

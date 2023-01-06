@@ -32,7 +32,7 @@
 		methods:{
 			gotoArticle(){
 				uni.navigateTo({
-					url: '/pages/article-page/review-page'
+					url: '/pages/article-page/article-page'
 				});
 			}
 		}

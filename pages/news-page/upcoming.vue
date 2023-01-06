@@ -5,6 +5,20 @@
 				{{item.name}}
 			</view>
 		</view>
+		<view class="base-card" @tap="gotoArticle" v-for="(item, index) of cards" :key="index" :style="{backgroundImage:`url(${item.img})`}">
+			<view class="card__header">
+				{{item.brand}}
+			</view>
+			<view class="releaseDate">
+				Release date: {{item.date}}
+			</view>
+			<view class="pricetitle">
+				Price from
+			</view>
+			<view class="price">
+				{{item.pricerange}}
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -12,6 +26,24 @@
 	export default {
 		data() {
 			return {
+				cards: [{
+					img: '/static/img/home/2.png',
+					brand: 'Tesla Model Y',  
+					date:"23/01/2023",
+					pricerange: "$90,000 - 120,000"
+				},
+				  {
+					img: '/static/img/home/image25.png',
+					brand: 'BMW i8',  
+					date:"23/01/2023",
+					pricerange: "$190,000 - 320,000"
+				},
+				  {
+					img: '/static/img/home/1.png',
+					brand: 'Tesla Model Y',  
+					date:"23/01/2023",
+					pricerange: "$90,000 - 120,000"
+				}],
 				active:0,
 				tabs: [{
 						name: "Recent"
@@ -34,6 +66,11 @@
 			};
 		},
 		methods:{
+			gotoArticle(){
+				uni.navigateTo({
+					url: '/pages/article-page/upcoming-page'
+				});
+			},
 			clickTab(idx){
 				this.active = idx
 			}
@@ -69,5 +106,63 @@
 				}
 			}
 		}
+	}
+
+	.base-card {
+		height: 674upx;
+		background-size: cover;
+		position: relative;
+		border-radius: 30upx;
+		margin-top: 25rpx;
+		padding: 25rpx;
+
+		.card__header {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 32px; 
+			/* identical to box height, or 50% */
+
+
+			color: #FFFFFF;
+
+		}
+		.releaseDate{
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 16px;
+			/* identical to box height, or 107% */
+
+
+			color: #FFFFFF;
+		}
+		.pricetitle{
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			/* identical to box height, or 143% */
+
+
+			color: #FFFFFF;
+		}
+		.price{
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 30px;
+			/* identical to box height, or 150% */
+
+
+			background: linear-gradient(90deg, #8FF9D0 0%, #92F3F0 102.78%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		} 
 	}
 </style>
