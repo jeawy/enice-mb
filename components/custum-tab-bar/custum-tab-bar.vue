@@ -5,7 +5,13 @@
 			<image v-for="item of left" @tap="onChangeBar(item.key)" :class="['bar-icon',item.key===0?'bar-icon-mr':'']"
 				:src="item.key===active?item.activeIcon:item.icon" mode="scaleToFill"></image>
 		</view>
-		<uni-fab class='uni-fab-custom' direction="vertical" vertical='bottom' :content="content" :pattern="pattern">
+		<uni-fab 
+			class='uni-fab-custom' 
+			direction="vertical" 
+			vertical='bottom' 
+			:content="content" 
+			@trigger="trigger"
+			:pattern="pattern">
 		</uni-fab>
 		<view>
 			<image v-for="item of right" @tap="onChangeBar(item.key)"
@@ -26,16 +32,23 @@
 					selectedColor: 'green',
 					iconColor: '#fff'
 				},
-				content: [{
-						text: '相册',
+				content: [
+					{
+						iconPath: "/static/img/article.png",
+                        selectedIconPath: "/static/img/article.png",
+						text: 'Article',
 						active: false
 					},
 					{
-						text: '首页',
+						iconPath: "/static/img/video.png",
+                        selectedIconPath: "/static/img/video.png",
+						text: 'Video',
 						active: false
 					},
 					{
-						text: '收藏',
+						iconPath: "/static/img/live.png",
+                        selectedIconPath: "/static/img/live.png",
+						text: 'Live',
 						active: false
 					}
 				],
@@ -61,6 +74,21 @@
 			};
 		},
 		methods: {
+			navTo(route) {
+			    this.$mRouter.push({ route });
+			},
+			trigger(e) { 
+				for (var i = 0; i < this.content.length; i++) {
+					this.content[i].active = false;
+				}
+				this.content[e.index].active = !e.item.active;
+				if (e.index == 0) {
+					this.navTo("/pages/article-page/publish?type=0");
+				}
+				else{
+					this.navTo("/pages/article-page/publish?type=1");
+				}
+			},
 			onChangeBar(key) {
 				this.active = key
 				this.$emit('tabChange',key)
