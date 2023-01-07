@@ -7,7 +7,7 @@
 			</view> 
 			<view class="settingList"  >
 				<view>+61 452323423</view>
-				<view><button class="verify-btn default-btn"  @tap="Done" >Verify</button></view>
+				<view><button class="verify-btn default-btn"  @tap="Verify" >Verify</button></view>
 			</view> 
 			<view  class="password-form"  >
 				<view>Vertification Code</view>
@@ -15,7 +15,7 @@
 					<input
 					    type="text"
 						class="password default-input"
-						v-model="Info.oldpassword" 
+						v-model="code" 
 					/>
 				</view>
 			</view>  
@@ -29,15 +29,8 @@
 	import uniIcon from "@/components/uni-icon/uni-icon.vue"
 	export default {
 		data() {
-			return {
-			 
-				Info:{
-					oldpassword:"",
-					newpassword:"",
-					newpassword1:""
-				},
-			 
-				 
+			return { 
+				code:"", 
 			};
 		},
 		computed: {
@@ -49,8 +42,26 @@
 			uniIcon,
 		},
 		methods: { 
-			   
+			Verify(){ 
+				uni.showModal({
+					content: "Verify code has been sent.",
+					confirmText:"Done",
+					showCancel:false,
+					success: (confirmRes) => { 
+					},
+				});
+			},   
 			Done(url) {
+				if(this.code == ""){
+					uni.showModal({
+						content: "Please input verify code.",
+						confirmText:"OK",
+						showCancel:false,
+						success: (confirmRes) => { 
+						},
+					});
+					return
+				}
 				uni.navigateTo({
 					url
 				})  
