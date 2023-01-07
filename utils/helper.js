@@ -17,7 +17,6 @@ export default {
 			icon
 		});
 	},
-
 	/**
 	 * 返回登录页面
 	 */
