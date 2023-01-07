@@ -6,7 +6,7 @@
 		<custum-tab-bar @tabChange="onTabChange" /> 
 		<!-- 这里是顶部状态栏 -->
 		<view class="status_bar" />
-		<component :is="['HomePage','NewsPage', 'User'][active]" />
+		<component :is="['HomePage','NewsPage', 'User','Profile'][active]" />
 
 	</scroll-view>
 </template>
@@ -15,11 +15,13 @@
 	import HomePage from '../home/home.vue'
 	import NewsPage from '@/pages/news-page/news.vue'
 	import User from '@/pages/user/user.vue'
+	import Profile from '@/pages/profile/profile.vue'
 	export default {
 		components: {
 			HomePage,
 			NewsPage,
-			User
+			User,
+			Profile
 		},
 		data() {
 			return {

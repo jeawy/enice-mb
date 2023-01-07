@@ -618,6 +618,15 @@
             }
 
         }
+        ,{
+            "path" : "pages/profile/profile",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Me",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "subPackages": [ //分包
         {
