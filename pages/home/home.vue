@@ -78,8 +78,7 @@
 	}
 
 	.car-home {
-		padding: 0 40upx;
-		padding-bottom: 210upx;
+		padding: 0 40upx 210upx;
 
 		.base-card+.base-card {
 			margin-top: 30upx;
