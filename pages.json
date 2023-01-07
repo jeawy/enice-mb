@@ -82,6 +82,14 @@
                 "backgroundColor": "#ffffff"
             }  
         }, 
+        {
+            "path": "pages/article-page/article-detail",
+            "style": {
+                "navigationStyle": "",
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff"
+            }  
+        }, 
 		{
             "path": "pages/article-page/upcoming-page",
             "style": {

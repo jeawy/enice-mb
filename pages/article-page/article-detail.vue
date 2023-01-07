@@ -6,71 +6,66 @@
                     <view class="uni-uploader-info" v-if="articletype == 0">{{imageList.length}}/9</view>
                 </view>
                 <view class="uni-uploader-body">
-                    <view class="uni-uploader__files">
+                    <view class="uni-uploader__files" v-if="articletype == 0">
                         <block v-for="(image,index) in imageList" :key="index" >
                             <view class="uni-uploader__file" style="position: relative;">
                                 <image class="uni-uploader__img" :src="image" @tap="previewImage"></image>
-                                <view class="close-view" @click="close(index)">x</view>
+                            
                             </view>
-                        </block>
-                        <view class="uni-uploader__input-box" v-show="showAddImage  && articletype == 0">
-                        	<view class="uni-uploader__input" @tap="chooseImg"></view>
-                        </view>
-						<block v-for="(image,index) in videoList" :key="index"  >
+                        </block> 
+                    </view>
+					<view class="uni-uploader__files" v-else > 
+						<block   >
                             <view class="uni-uploader__file-video" style="position: relative;">
-                                <image class="uni-uploader__img-video" :src="image" @tap="previewImage"></image>
-                                <view class="close-view" @click="close(index)">x</view>
+								<video id="myVideo"  
+												class="uni-uploader__img-video"
+												:src="videopath"
+								   controls>
+								</video> 
                             </view>
-                        </block>
-						<view class=" uni-uploader__input-box-video" v-show="showAddImage  && articletype == 1">
-                        	<view class="uni-uploader__input-video" @tap="chooseImg">
-								<image src="/static/img/play1.png" class="imgplay"></image>
-							</view>
-                        </view>
+                        </block> 
                     </view>
                 </view>
             </view>
         </view>
         <view class="feedback-body">
-            <input class="feedback-input" placeholder="Title:" v-model="sendDate.title"   />
+            <view class="feedback-input"   >Title:{{ sendDate.title }}</view>
         </view> 
         
         <view class="feedback-body">
-            <textarea placeholder="Content:"  v-model="sendDate.content" 
-			class="feedback-textare" />
-        </view> 
-
-		<view class="content-flex">
-			<view class="btns">
-				<button  class="default-btn topic-btn" @tap="send">#topic</button>
-				<button  class="default-btn topic-btn" @tap="send">@user</button>
-		    </view>
-			<view class="topics">
-				<view class="topic" v-for="(item, index) of topics" :key="index">
-                    <view class="title">#{{ item.title }} </view>
-					<view class="view">{{ item.view }} views</view>
+            <view  class="feedback-textare" >Content: {{ sendDate.content }}</view>
+			<view class="content-flex"> 
+				<view class="topics">
+					<view class="topic" v-for="(item, index) of topics" :key="index">
+						<view class="title">#{{ item.title }} </view> 
+					</view>
 				</view>
-			</view>
+			</view> 
         </view> 
- 
 
         <button type="primary" class="post-btn default-btn" @tap="send">Post</button>
 		 
     </view>
 </template>
 
-<script>
-import store from '@/store'
-import {ApiPostFeedback } from '@/api/feedback.js'
+<script> 
     export default {
         data() {
             return {
 				showAddImage:true,
-                imageList: [], 
+                imageList: [
+					"/static/img/home/1.png",
+					"/static/img/home/2.png",
+					"/static/img/home/car2.png",
+					"/static/img/home/image25.png",
+					"/static/img/home/image26.png",
+					"/static/img/home/s2.png",
+				], 
+				videopath:"",
+				controls:true,
 				videoList:[],
                 sendDate: {
-					title:"",
-                    score: 3,
+					title:"", 
                     content: "",
                     contact: ""
                 },
@@ -78,48 +73,24 @@ import {ApiPostFeedback } from '@/api/feedback.js'
 				topics:[
 					{
 						title:"Tesla Sydney",
-						view:"1.3m"
+						 
 					},
 					{
 						title:"Tesla Model 3",
-						view:"1.1m"
+						 
 					},
 					{
 						title:"Tesla Model S",
-						view:"0.8m"
+					 
 					},
 				]
             }
         },
         onLoad(options) {
-			this.articletype = options.type;
-			/*
-			if(options.type == 0){
-				uni.chooseImage({
-					sourceType: [  "album"],
-					sizeType: "compressed",
-					count: 9 - this.imageList.length,
-					success: (res) => { 
-						this.imageList = this.imageList.concat(res.tempFilePaths);
-						if (this.imageList.length >= 9 ){
-							this.showAddImage = false
-							}
-					}
-				})
-			}
-			else{
-				uni.chooseVideo({
-					sourceType: [  "album"],
-					sizeType: "compressed",
-					count:1,
-					success: (res) => { 
-						this.videoList = this.videoList.concat(res.tempFilePath);
-						if (this.videoList.length >= 1 ){
-							this.showAddImage = false
-						}
-					}
-				})
-		    }*/
+			this.articletype = options.type
+			this.sendDate.title = options.title;  
+			this.sendDate.content = options.content;  
+			this.videopath = options.videopath
         },
         methods: { 
             close(e){
@@ -156,10 +127,7 @@ import {ApiPostFeedback } from '@/api/feedback.js'
 					})
 				}
                 
-            },
-            chooseStar(e) { //点击评星
-                this.sendDate.score = e;
-            },
+            }, 
             previewImage() { //预览图片
                 uni.previewImage({
                     urls: this.imageList
@@ -196,51 +164,7 @@ import {ApiPostFeedback } from '@/api/feedback.js'
 					title:"请稍后..."
 				});
 			  
-                ApiPostFeedback( this.sendDate).then((data) => {
-                    console.log(data)
-                    uni.hideLoading();
-                    if (data.status === 0) {
-                        if (imgs.length > 0){
-                            let token = store.state.accessToken || uni.getStorageSync('accessToken')
-                            // 上传图片，微信小程序不支持批量上传
-                            imgs.forEach(ele=>{ 
-                                uni.uploadFile({
-                                    url: store.state.BaseUrl +'api/feedback/feedback/',
-                                    filePath: ele.uri,
-                                    name:ele.name,
-                                    header: {  
-                                        "Content-Type": "multipart/form-data",
-                                        'Authorization': token,  
-                                        // 'content-type': 'application/json'  
-                                    },
-                                    formData: {id:data.msg,method:"put"},
-                                    success: (res) => { 
-                                        console.log(res) 
-                                    },
-                                    fail: (res) => {
-                                        uni.showToast({
-                                            title: "失败",
-                                            icon:"none"
-                                        });
-                                        console.log(res)
-                                    }
-                                }); 
-                            })
-                        }
-                        uni.showToast({
-                            title: "反馈成功!"
-                        });
-                        this.imageList = [];
-                        this.sendDate = {
-                            score: 0,
-                            content: "",
-                            contact: ""
-                        }
-                    }
-                }).catch(function(err) {
-                    console.log(err);
-                    uni.hideLoading();
-                }) 
+                
             }
         },
         beforeDestroy(){
@@ -272,11 +196,11 @@ import {ApiPostFeedback } from '@/api/feedback.js'
 		}
 		.content-flex{
 			.topics{ 
-				padding: 15rpx;
-				.topic{
-					display: flex;
-					justify-content: space-between; 
-					padding:15rpx  0;
+				
+				display: flex;
+
+				.topic{  
+					padding:15rpx  ;
 					.title{
 						color:#666666;
 					}
@@ -425,6 +349,7 @@ import {ApiPostFeedback } from '@/api/feedback.js'
     	line-height: 50upx; 
 		width: 650rpx;
     	box-sizing: border-box;
+		color:#999999;
     	border-bottom:1px solid #CCCCCC ; 
     }
     .feedback-input {

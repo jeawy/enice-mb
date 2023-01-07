@@ -30,7 +30,10 @@
             "Payment" : {},
             "Push" : {},
             "Share" : {},
-            "Speech" : {}
+            "Speech" : {},
+            "VideoPlayer" : {},
+            "Barcode" : {},
+            "Camera" : {}
         },
         /* 模块配置 */
         "distribute" : {

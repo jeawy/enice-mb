@@ -52,10 +52,7 @@
 				</view>
 			</view>
         </view> 
- 
-
         <button type="primary" class="post-btn default-btn" @tap="send">Post</button>
-		 
     </view>
 </template>
 
@@ -191,6 +188,11 @@ import {ApiPostFeedback } from '@/api/feedback.js'
 					});
 					return;
 				}
+				this.$mRouter.push({
+					route:"/pages/article-page/article-detail?title="+this.sendDate.title
+					+"&content="+this.sendDate.content+"&type="+this.articletype+"&videopath="+this.videoList
+				})
+				return
                 uni.showLoading({
 					mask: true,
 					title:"请稍后..."

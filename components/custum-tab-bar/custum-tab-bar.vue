@@ -44,12 +44,6 @@
                         selectedIconPath: "/static/img/video.png",
 						text: 'Video',
 						active: false
-					},
-					{
-						iconPath: "/static/img/live.png",
-                        selectedIconPath: "/static/img/live.png",
-						text: 'Live',
-						active: false
 					}
 				],
 				active: 0,
