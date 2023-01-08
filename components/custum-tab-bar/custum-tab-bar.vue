@@ -122,6 +122,7 @@
 					left: 50%;
 					transform: translateX(-50%);
 					bottom: 90upx;
+					box-shadow: 0px 0px 30px rgba(2, 41, 100, 0.4);
 				}
 
 				.uni-fab__content--other-platform {
@@ -132,19 +133,17 @@
 					transform: translateX(-50%);
 					bottom: 90upx;
 					background: linear-gradient(90deg, #91FFD4 0.77%, #87EBD5 57.12%, #9CFBF8 115.97%);
-					.fab-circle-v {
-						height: 50upx;
-						width: 10upx;
-						border-radius: 5upx;
-						top: calc(50% - 25upx);
-						left: calc(50% - 5upx);
-					}
-					.fab-circle-h {
-						width: 50upx;
-						height: 10upx;
-						border-radius: 5upx;
-						left: calc(50% - 25upx);
-						top: calc(50% - 5upx);
+					
+				}
+				.fab-circle-icon{
+					font-weight: 600;
+					width: 50upx;
+					height: 50upx;
+					line-height: 50upx;
+					&:before{
+						display: inline-block;
+						transform: translate(0,4upx);
+						font-size: 50upx!important;
 					}
 				}
 			}

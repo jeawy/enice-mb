@@ -1,6 +1,7 @@
 <template>
 	<view class="profile">
 		<view class="profile-card">
+			
 			<view class="profile-card-title">
 				Me
 			</view>
@@ -17,7 +18,7 @@
 					<view class="user-id">
 						User id: 1234567
 					</view>
-					<view class="info-edit ">
+					<view class="info-edit" @tap="toEditPage">
 						Edit profile >>
 					</view>
 				</view>
@@ -36,9 +37,7 @@
 					</view>
 				</view>
 			</view>
-
-
-
+			
 		</view>
 
 		<view class="list-card">
@@ -93,6 +92,13 @@
 					}
 				]
 			};
+		},
+		methods:{
+			toEditPage(){
+				uni.navigateTo({
+					url:'/pages/profile/edit-profile'
+				})
+			}
 		}
 	}
 </script>
