@@ -1,15 +1,17 @@
 <!-- 通用卡片 Enice -->
 <template>
-	<view class="base-card" @tap="gotoArticle" :style="{backgroundImage:`url(${data.img})`}">
-		<view class="card__header">
+	<view class="base-card"  :style="{backgroundImage:`url(${data.img})`}">
+		<view class="card__header" @tap="gotoArticle">
 			{{data.title}}
 		</view>
-		<view :class="['custom-tag',['type--live','type--record'][data.tagType]]">
+		<view @tap="gotoArticle" :class="['custom-tag',['type--live','type--record'][data.tagType]]">
 			<view class="tag-icon"></view> {{['Live','Record'][data.tagType]}}
 		</view>
 		<view class="profile-wrap">
 			<image class="profile" :src="data.profile" mode=""></image>
 			{{data.username}}
+			<image class="star" @tap="onChangeStar" src="/static/img/star.png" v-if="data.star == 0" mode=""></image>
+			<image class="star" @tap="onChangeStar" src="/static/img/star-selected.png" v-if="data.star == 1" mode=""></image>
 		</view>
 	</view>
 </template>
@@ -34,6 +36,10 @@
 				uni.navigateTo({
 					url: '/pages/article-page/article-page'
 				});
+			},
+			onChangeStar( ) { 
+				this.data.star = this.data.star == 1?0:1;
+				this.$emit('starChange')
 			}
 		}
 	}
@@ -97,14 +103,20 @@
 
 		.profile-wrap {
 			position: absolute;
-			bottom: 46upx;
-			left: 30upx;
+			bottom: 46rpx;
+			left: 30rpx;
+			width: 630rpx;
 			color: rgba(255, 255, 255, 0.87);
 			font-size: 40upx;
 			font-weight: 600;
 			display: flex;
 			align-items: center;
-
+            .star{
+				position:absolute;
+				right:25rpx;
+				width: 50upx;
+				height: 50upx;
+			}
 			.profile {
 				width: 60upx;
 				height: 60upx;

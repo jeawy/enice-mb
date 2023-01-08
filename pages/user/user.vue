@@ -120,89 +120,8 @@
 					<uniIcon type="arrowright"></uniIcon>
 				</view> 
 			</view>
-			<!--
-			<view class="section" @tap="target('/pages/user/giftcenter/giftcenter')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`lipin.png`"></image> 
-				</view>
-				<text class="sectiontxt">积分好礼</text>
-				<view  class="sectionnumber ">
-					<view   class="leftmoney">
-						<div class="backlog" v-if="newtag">新品上架</div></view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>  
-			</view> -->
-			<view class="section" @tap="target('/pages/user/currency/currencyRecord')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`jifen.png`"></image> 
-				</view>
-				<text class="sectiontxt">积分明细</text>
-				<view  class="sectionnumber "> 
-					<uniIcon type="arrowright"></uniIcon>
-				</view>  
-			</view>
-			<view class="section" @tap="target('/pages/record/myrecord')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`excel1.png`"></image>
-					
-				</view>
-				<text class="sectiontxt">我的登记薄</text>
-				<view class="sectionnumber"> 
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>
-		    <view class="section" @tap="target('/pages/backlog/list')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`daiban1.png`"></image> 
-				</view>
-				<text class="sectiontxt">待办事项</text>
-				<view  class="sectionnumber ">
-					<view   class="leftmoney">
-						<div class="backlog" v-if="unfinished_count>0">{{unfinished_count}}项待办</div></view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view> 
-			</view>
-			<view class="section" @tap="target('/pages/repair/list')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`wujin.png`"></image> 
-				</view>
-				<text class="sectiontxt">我的报修</text>
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>
-			<view class="section" @tap="target('/pages/exchanges/mylist')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`exchanges1.png`"></image> 
-				</view>
-				<text class="sectiontxt">闲置租售</text>
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>  
-			<view class="section2" @tap="target('/pages/user/properties')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`icons/fangwu1.png`"></image>
-					 
-				</view>
-				<text class="sectiontxt">我的房产</text>
-				<view>
-					<view v-if="likecount" class="unreadnum">{{unlikecount}}</view>
-				</view>
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>
-			<view class="section" @tap="target('/pages/user/crt')">
-				<view>
-					<image class="icon" :src="baseAppUrl+`renzheng.png`"></image> 
-				</view>
-				<text class="sectiontxt">我的认证</text> 
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>
-			<view class="section" @tap="target('/pages/user/communities')">
+		  
+			<view class="section" @tap="target('/pages/user/communities', false)">
 				<view>
 					<image class="icon" :src="baseAppUrl+`guanzhu.png`"></image>
 				</view>
@@ -221,20 +140,7 @@
 					<uniIcon type="arrowright"></uniIcon>
 				</view>
 			</view>
-
-			<view class="section2" @tap="target('/pages/uni-feedback/myfeedback', false)">
-				<view>
-					<image class="icon" :src="baseAppUrl+`icons/fankui.png`"></image> 
-				</view>
-				<text class="sectiontxt">意见反馈</text>
-				<view>
-					<view v-if="feedcount" class="unreadnum">{{unfeedcount}}</view>
-				</view>
-				<view>
-					<uniIcon type="arrowright"></uniIcon>
-				</view>
-			</view>
-
+ 
 			<view class="section" @tap="target('/pages/user/potocol', false)">
 				<view>
 					<image class="icon" :src="baseAppUrl+`icons/yinsi1.png`"></image> 
@@ -252,7 +158,7 @@
 			版本:{{versionName}} 
 		</view>
 		<view class="foot company"> 
-			Copyright©2019-2022 西安字节音图电子科技有限公司 
+			Copyright©2019-2022 
 		</view>  
 		 <Contact    >   </Contact>
 	</view>
