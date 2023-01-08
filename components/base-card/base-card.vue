@@ -8,8 +8,8 @@
 			<view class="tag-icon"></view> {{['Live','Record'][data.tagType]}}
 		</view>
 		<view class="profile-wrap">
-			<image class="profile" :src="data.profile" mode=""></image>
-			{{data.username}}
+			<image @tap="gotoOthers" class="profile" :src="data.profile" mode=""></image>
+			<view @tap="gotoOthers" class="username" >{{data.username}}</view>
 			<image class="star" @tap="onChangeStar" src="/static/img/star.png" v-if="data.star == 0" mode=""></image>
 			<image class="star" @tap="onChangeStar" src="/static/img/star-selected.png" v-if="data.star == 1" mode=""></image>
 		</view>
@@ -40,6 +40,11 @@
 			onChangeStar( ) { 
 				this.data.star = this.data.star == 1?0:1;
 				this.$emit('starChange')
+			},
+			gotoOthers(){
+				uni.navigateTo({
+					url: '/pages/profile/others'
+				});
 			}
 		}
 	}
@@ -111,6 +116,10 @@
 			font-weight: 600;
 			display: flex;
 			align-items: center;
+			.username{
+				font-size: 40upx;
+			    font-weight: 600;
+			}
             .star{
 				position:absolute;
 				right:25rpx;

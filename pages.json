@@ -634,6 +634,13 @@
                 "enablePullDownRefresh": false
             }
             
+        },{
+            "path" : "pages/profile/others",
+            "style" :                                                                                    
+            { 
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
     "subPackages": [ //分包

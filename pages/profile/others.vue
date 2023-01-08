@@ -1,13 +1,9 @@
 <template>
 	<view class="profile">
-		<view class="profile-card">
-			<view class="profile-card-title">
-				Me
-			</view>
+		<view class="profile-card"> 
+			<uni-icons class="setting-icon" type="chat" size="24" color="#fff"></uni-icons>
 			
-			<uni-icons class="setting-icon" type="gear-filled" size="24" color="#fff"></uni-icons>
-			
-
+            <button class="followed">Followed</button>
 			<view class="user-info">
 				<image class="user-info-img" src="/static/img/logo.png" mode="aspectFill"></image>
 				<view class="user-info-msg">
@@ -17,9 +13,7 @@
 					<view class="user-id">
 						User id: 1234567
 					</view>
-					<view class="info-edit ">
-						Edit profile >>
-					</view>
+					 
 				</view>
 			</view>
 
@@ -30,40 +24,25 @@
 					</view>
 					<view class="item-label">
 						{{item.label}}
-					</view>
-					<view class="item-icon-wrap">
-						<image class="item-icon" :src="item.icon" mode=""></image>
-					</view>
+					</view> 
 				</view>
 			</view>
 
 
 
 		</view>
-
-		<view class="list-card">
-			<view class="list-card__item">
-				<view class="card__item__label">
-					<image class="item-icon" src="/static/img/profile/ren.svg" mode=""></image>
-					Cooperation
-				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
-			</view>
-			<view class="list-card__item">
-				<view class="card__item__label">
-					<image class="item-icon" src="/static/img/profile/dianzan.svg" mode=""></image>
-					Feedback
-				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
-			</view>
-			<view class="list-card__item">
-				<view class="card__item__label">
-					<image class="item-icon" src="/static/img/profile/gantan.svg" mode=""></image>
-					About us
-				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
-			</view>
+		<view class="notes">Notes:34</view>
+		<view class="cards">
+			<base-card :data="card1"></base-card> 
 		</view>
+		<view class="cards">
+		<base-card :data="card2" ></base-card>
+	</view>
+		<view class="cards">
+        <base-card :data="card3" ></base-card>
+	</view>
+
+		 
 	</view>
 </template>
 
@@ -71,6 +50,21 @@
 	export default {
 		data() {
 			return {
+				card1: {
+					img: '/static/img/home/image25.png',
+					title: 'Review Test Drive Taycan?',
+				 
+				},
+				card2: {
+					img: '/static/img/home/image29.png',
+					title: 'What’s the top 10 Electric car in 2022?',
+					 
+				},
+				card3: {
+					img: '/static/img/home/image25.png',
+					title: 'Review Test Drive Taycan?',
+					 
+				},
 				statistics: [{
 						label: "Following",
 						num: 32,
@@ -97,16 +91,41 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.profile {
-		padding: var(--status-bar-height) 40upx 210upx;
+		background-color: white;
+		padding: 25rpx;
 		font-family: 'Montserrat';
+		.notes{
+			margin-top: 25rpx;
+			color: #999999;
+			font-size: 16px;
+			line-height: 40rpx;;
+		}
+		.cards{
+			margin: 25rpx 0;
+		}
 
 		.profile-card {
+			padding-top: 25rpx;
+			.followed{
+				position: absolute;
+				top: 65upx;
+				right: 35upx;
+				width: 140upx;
+				height: 48upx;
+				line-height: 48upx;
+				font-size: 12px;
+				background: #FFFFFF;
+				/* xs */
+
+				box-shadow: 0px 1px 2px rgba(38, 51, 49, 0.1);
+				border-radius: 5px;
+			}
 			.setting-icon{
 				position: absolute;
 				top: 60upx;
-				right: 54upx;
+				right: 180upx;
 				width: 48upx;
 				height: 48upx;
 			}
