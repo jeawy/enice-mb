@@ -26,10 +26,11 @@
 					<view class="underline" v-if="current===idx"></view>
 				</view>
 			</view>
-			<uni-icons type="bottom" color="#333333" size="14"></uni-icons>
+			 
 		</view>
 		<base-card :data="card1"></base-card>
 		<base-card :data="card2" ></base-card>
+		<base-card :data="card3" ></base-card>
 	</view>
 </template>
 
@@ -38,20 +39,27 @@
 		data() {
 			return {
 				current: 0,
-				items: ['Follow', 'Live', 'Popular', 'Latest', 'Nearby'],
+				items: [ 'Latest', 'Follow'],
 				card1: {
 					img: '/static/img/home/2.png',
 					title: 'What’s the top 10 Electric car in 2022 ?',
 					username: "Abbey",
 					profile: '/static/img/home/touxiang.jpg',
-					tagType: 0
+					 
 				},
 				card2: {
-					img: '/static/img/home/2.png',
+					img: '/static/img/home/image25.png',
+					title: 'Review Test Drive Taycan',
+					username: "Abbey",
+					profile: '/static/img/home/touxiang.jpg',
+					 
+				},
+				card3: {
+					img: '/static/img/home/image29.png',
 					title: 'What’s the top 10 Electric car in 2022 ?',
 					username: "Abbey",
 					profile: '/static/img/home/touxiang.jpg',
-					tagType: 1
+					 
 				}
 			};
 		},
@@ -155,13 +163,14 @@
 			margin: 40upx auto 44upx;
 			.custom-segmented {
 				flex: 1;
-				display: flex;
-				justify-content: space-between;
+				display: flex; 
+				
 				font-size: 24upx;
 				color: #000;
 				margin-right: 54upx;
 				
 				.custom-segmented-item {
+					margin-right: 50rpx;
 					height: 36upx;
 					position: relative;
 					line-height: 36upx;

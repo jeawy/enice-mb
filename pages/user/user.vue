@@ -110,22 +110,21 @@
 					<uniIcon type="arrowright"></uniIcon>
 				</view> 
 			</view>  
-			<view class="section" @tap="target('/pages/user/incomes')">
+			<view class="section" @tap="target('/pages/article-page/preference', false)">
 				<view>
 					<image class="icon" :src="baseAppUrl+`qianbao.png`"></image>
 				</view>
-				<text class="sectiontxt">我的收支</text>
-				<view  class="sectionnumber ">
-					<view v-if="hasLogin && left>0" class="leftmoney">账户余额:<text class="money">{{left}}</text>￥</view>
+				<text class="sectiontxt">preference</text>
+				<view  class="sectionnumber "> 
 					<uniIcon type="arrowright"></uniIcon>
-				</view> 
+				</view>  
 			</view>
 		  
 			<view class="section" @tap="target('/pages/user/communities', false)">
 				<view>
 					<image class="icon" :src="baseAppUrl+`guanzhu.png`"></image>
 				</view>
-				<text class="sectiontxt">我的关注</text>
+				<text class="sectiontxt">Collection</text>
 				<view  class="sectionnumber "> 
 					<uniIcon type="arrowright"></uniIcon>
 				</view> 

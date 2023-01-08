@@ -117,6 +117,19 @@
             }  
         }, 
         {
+            "path": "pages/article-page/preference",
+            "style": {
+                "navigationBarTitleText": "Preference", 
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#ffffff",
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }  
+        }, 
+        {
             "path": "pages/article-page/brand-page",
             "style": {
                 "navigationBarTitleText": "Volvo EC", 
