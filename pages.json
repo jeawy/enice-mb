@@ -655,6 +655,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/profile/edit-profile",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
     "subPackages": [ //分包
         {
