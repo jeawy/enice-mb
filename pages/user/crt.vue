@@ -1,29 +1,6 @@
 <template>
   <view class="selectcommunitylist">
-    <view
-      v-for="(item, index) in communityList"
-      :key="index"
-      class="selectitem"
-    >
-      <view class="title">{{ item[1] }}</view>
-      <view class="right">
-        <text class="righttxt">我是{{ item[2] }}</text>
-      </view>
-    </view>
-    <view class="reload" @tap="getCrts(true)">获取最新认证</view>
-    <view class="emptycontainer" v-if="communityList.length == 0">
-      <image class="empty-img" :src="baseAppUrl + `kong.png`"></image>
-      <view class="empty-text">无任何认证信息</view>
-    </view>
-    <view class="tips">
-      <view class="title">
-        <image :src="baseAppUrl + 'tishi.png'" class="tishi" />
-        <text>温馨提示:</text>
-      </view>
-      <view class="appraisetxt">身份认证的两个方式:</view>
-      <view class="appraisetxt">1、身份认证由小区物业认证</view>
-      <view class="appraisetxt">2、由已认证为业主的业主协助认证</view>
-    </view>
+      for google map
   </view>
 </template>
 

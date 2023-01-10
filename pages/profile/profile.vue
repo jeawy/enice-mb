@@ -73,7 +73,7 @@
 				statistics: [{
 						label: "Following",
 						num: 32,
-						icon: ''
+						icon: '/static/img/pencel.png'
 					},
 					{
 						label: "Followers",
@@ -83,12 +83,12 @@
 					{
 						label: "Posts",
 						num: 30,
-						icon: ''
+						icon: '/static/img/car.png'
 					},
 					{
 						label: "Likes & Cols",
 						num: 300,
-						icon: ''
+						icon:'/static/img/chat.png'
 					}
 				]
 			};
@@ -103,7 +103,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.profile {
 		padding: var(--status-bar-height) 40upx 210upx;
 		font-family: 'Montserrat';

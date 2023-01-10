@@ -135,15 +135,14 @@
 					background: linear-gradient(90deg, #91FFD4 0.77%, #87EBD5 57.12%, #9CFBF8 115.97%);
 					
 				}
-				.fab-circle-icon{
-					font-weight: 600;
-					width: 50upx;
-					height: 50upx;
-					line-height: 50upx;
+				.fab-circle-icon{ 
+					width: 60rpx;
+					height: 60rpx;
+					line-height: 50rpx;
 					&:before{
 						display: inline-block;
 						transform: translate(0,4upx);
-						font-size: 50upx!important;
+						font-size: 50rpx!important;
 					}
 				}
 			}
