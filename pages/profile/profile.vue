@@ -32,7 +32,7 @@
 					<view class="item-label" @tap="goto(item.url1)">
 						{{item.label}}
 					</view>
-					<view class="item-icon-wrap" @tap="goto(item.url)">
+					<view class="item-icon-wrap" @tap="iconTarget(item.url,idx)">
 						<image class="item-icon" :src="item.icon" mode=""></image>
 					</view>
 				</view>
@@ -102,6 +102,9 @@
 			};
 		},
 		methods:{
+			iconTarget(url,idx){
+				idx===2?this.$emit('changeTab',1):this.goto(url)
+			},
 			goto(url){
 				/*
 				uni.navigateTo({

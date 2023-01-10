@@ -3,10 +3,10 @@
 <template>
 	<scroll-view scroll-y class="entry-container">
 		<!-- 底部tabbar -->
-		<custum-tab-bar ref="menus" :active=active @tabChange="onTabChange" /> 
+		<custum-tab-bar :active=active @tabChange="onTabChange" /> 
 		<!-- 这里是顶部状态栏 -->
 		<view class="status_bar" />
-		<component :is="['HomePage','NewsPage', 'Crt','Profile'][active]" />
+		<component :is="['HomePage','NewsPage', 'Crt','Profile'][active]"  @changeTab="onTabChange"/>
 
 	</scroll-view>
 </template>
@@ -23,26 +23,13 @@
 			Crt,
 			Profile
 		},
-		onLoad(options){ 
-           if(options.key){
-			this.backtoMenu(options.key) 
-		   }
-		},
 		data() {
 			return {
 				active: 0
 			};
 		},
 		methods:{
-			backtoMenu(key){
-				this.$nextTick(() => { 
-					this.$refs.menus.TabChangeBar() 
-
-				})
-
-			},
 			onTabChange(key){
-				console.log(1111)
 				this.active = key
 			}
 		}
