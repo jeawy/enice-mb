@@ -32,7 +32,7 @@
 					<view class="item-label">
 						{{item.label}}
 					</view>
-					<view class="item-icon-wrap">
+					<view class="item-icon-wrap" @tap="goto(item.url)">
 						<image class="item-icon" :src="item.icon" mode=""></image>
 					</view>
 				</view>
@@ -71,21 +71,25 @@
 		data() {
 			return {
 				statistics: [{
+					    url:"/pages/profile/edit-profile",
 						label: "Following",
 						num: 32,
 						icon: '/static/img/pencel.png'
 					},
 					{
+						url:"/pages/user/communities",
 						label: "Followers",
 						num: 160,
 						icon: '/static/img/profile/Star.svg'
 					},
 					{
-						label: "Posts",
+						url:"/pages/entry/index?key=1",
+						label: "PoonLoadsts",
 						num: 30,
 						icon: '/static/img/car.png'
 					},
 					{
+						url:"",
 						label: "Likes & Cols",
 						num: 300,
 						icon:'/static/img/chat.png'
@@ -94,6 +98,16 @@
 			};
 		},
 		methods:{
+			goto(url){
+				/*
+				uni.navigateTo({
+					url:url
+				})
+				*/
+				this.$mRouter.push(
+					{route:url}
+				)
+			},
 			toEditPage(){
 				uni.navigateTo({
 					url:'/pages/profile/edit-profile'

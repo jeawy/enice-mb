@@ -25,6 +25,9 @@
 <script>
 	export default {
 		name: "custum-tab-bar",
+		props:{
+			active:0
+		},
 		data() {
 			return {
 				pattern: {
@@ -45,8 +48,7 @@
 						text: 'Video',
 						active: false
 					}
-				],
-				active: 0,
+				], 
 				left: [{
 					icon: '/static/img/home/mofang.png',
 					activeIcon: '/static/img/home/mofang1.png',
@@ -67,9 +69,23 @@
 				}, ]
 			};
 		},
+		mounted(){
+			this.monitoring();
+		},
 		methods: {
+			monitoring(){
+				this.$on('TabChangeBar', (res) => {
+					console.log(res)
+                    this.onChangeBar(res.key)
+                })
+			},
 			navTo(route) {
 			    this.$mRouter.push({ route });
+			},
+			TabChangeBar(key){
+				this.onChangeBar(1) 
+				console.log(6666)
+				console.log(key)
 			},
 			trigger(e) { 
 				for (var i = 0; i < this.content.length; i++) {

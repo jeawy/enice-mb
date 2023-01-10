@@ -4,10 +4,10 @@
 			<view class="profile__header__title">
 				<uni-icons @tap="goBack" color="#fff" type="back" size="16"></uni-icons>
 				Quinn Zuo
-				<button>Save</button>
+				<button @tap="Save">Save</button>
 			</view>
 			<view class="profile-wrap">
-				<image class="profile-img" src="../../static/logo.png" mode=""></image>
+				<image class="profile-img" src="../../static/img/logo.png" mode=""></image>
 				<uni-icons type="camera-filled" size="24"></uni-icons>
 			</view>
 		</view>
@@ -31,7 +31,7 @@
 			<view class="info-list__item">
 				Birth Day
 				<view class="list__right">
-					<uni-datetime-picker :clear-icon="false" type="date" placeholder="Add" v-model="form.birthDay"
+					<uni-datetime-picker class="adddate" :clear-icon="false" type="date" placeholder="Add" v-model="form.birthDay"
 						:border="false" />
 					<uni-icons type="forward" size="18" color="#666"></uni-icons>
 				</view>
@@ -59,6 +59,12 @@
 			};
 		},
 		methods: {
+			Save(){
+				uni.showToast({
+					icon:"success",
+					title:"Saved!"
+				})
+			},
 			goBack() {
 				uni.navigateBack()
 			},
@@ -78,14 +84,16 @@
 		}
 	}
 </script>
-
-<style lang="scss" scoped>
+<style>
+page{
+    background:#FFFFFF;
+}
+</style>
+<style lang="scss" scoped >
 	// var(--status-bar-height)
-	page {
-		background-color: #fff;
-	}
-
+	 
 	.edit-profile {
+		background-color: #fff;
 		.edit-profile__header {
 
 
@@ -192,7 +200,7 @@
 								text-align: right;
 							}
 							.uni-input-input{
-								color: #666;
+								color: red;
 								text-align: right;
 							}
 						}
