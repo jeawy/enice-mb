@@ -6,7 +6,7 @@
 				Me
 			</view>
 			
-			<uni-icons class="setting-icon" type="gear-filled" size="24" color="#fff"></uni-icons>
+			<uni-icons class="setting-icon" @tap="goto('/pages/user/potocol')"  type="gear-filled" size="24" color="#fff"></uni-icons>
 			
 
 			<view class="user-info">
@@ -26,10 +26,10 @@
 
 			<view class="statistics-items">
 				<view v-for="(item,idx) of statistics" :key="idx" class="statistics__item">
-					<view class="item-num">
+					<view class="item-num" @tap="goto(item.url1)">
 						{{item.num}}
 					</view>
-					<view class="item-label">
+					<view class="item-label" @tap="goto(item.url1)">
 						{{item.label}}
 					</view>
 					<view class="item-icon-wrap" @tap="goto(item.url)">
@@ -41,26 +41,26 @@
 		</view>
 
 		<view class="list-card">
-			<view class="list-card__item">
-				<view class="card__item__label">
+			<view class="list-card__item" @tap="goto('/pages/article-page/preference')" >
+				<view class="card__item__label"  >
 					<image class="item-icon" src="/static/img/profile/ren.svg" mode=""></image>
 					Cooperation
 				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
+				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
-			<view class="list-card__item">
+			<view class="list-card__item"  >
 				<view class="card__item__label">
 					<image class="item-icon" src="/static/img/profile/dianzan.svg" mode=""></image>
 					Feedback
 				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
+				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
 			<view class="list-card__item">
 				<view class="card__item__label">
 					<image class="item-icon" src="/static/img/profile/gantan.svg" mode=""></image>
 					About us
 				</view>
-				<uni-icons type="forward" size="12"></uni-icons>
+				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
 		</view>
 	</view>
@@ -71,24 +71,28 @@
 		data() {
 			return {
 				statistics: [{
+					    url1:"",
 					    url:"/pages/profile/edit-profile",
 						label: "Following",
 						num: 32,
 						icon: '/static/img/pencel.png'
 					},
 					{
+						url1:"",
 						url:"/pages/user/communities",
 						label: "Followers",
 						num: 160,
 						icon: '/static/img/profile/Star.svg'
 					},
 					{
+						url1:"",
 						url:"/pages/entry/index?key=1",
-						label: "PoonLoadsts",
+						label: "Posts",
 						num: 30,
 						icon: '/static/img/car.png'
 					},
 					{
+						url1:"/pages/user/communities",
 						url:"",
 						label: "Likes & Cols",
 						num: 300,
@@ -127,8 +131,8 @@
 				position: absolute;
 				top: 60upx;
 				right: 54upx;
-				width: 48upx;
-				height: 48upx;
+				width: 58upx;
+				height: 58upx;
 			}
 			/* linear green */
 			position: relative;
@@ -194,7 +198,7 @@
 
 				.statistics__item {
 					font-weight: 600;
-					text-align: center;
+					text-align: center; 
 
 					.item-num {
 						font-size: 36upx;
@@ -239,9 +243,9 @@
 				justify-content: space-between;
 				align-items: center;
 				padding: 34upx 0;
-				font-size: 28rpx;
+				font-size: 28rpx; 
 				&+.list-card__item{
-					border-top: 1px solid #F3F3F3;
+					border-top: 1px solid #CCCCCC;
 				}
 			}
 

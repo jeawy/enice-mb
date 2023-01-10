@@ -76,6 +76,7 @@
 						
 						},
 					});
+					return;
 				}
 				else if(this.Info.newpassword == ""){
 					uni.showModal({
@@ -86,6 +87,7 @@
 						
 						},
 					});
+					return;
 				}
 				else if(this.Info.newpassword != this.Info.newpassword1 ){
 					uni.showModal({
@@ -96,6 +98,7 @@
 						
 						},
 					});
+					return;
 				}
 
 				uni.showModal({
@@ -104,7 +107,7 @@
 						showCancel:false,
 						success: (confirmRes) => {
 						    this.$mRouter.push({
-								route: "/pages/user/user"  
+								route: "/pages/entry/index"  
 							});
 						},
 					});

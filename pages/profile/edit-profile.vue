@@ -3,7 +3,7 @@
 		<view class="edit-profile__header">
 			<view class="profile__header__title">
 				<uni-icons @tap="goBack" color="#fff" type="back" size="16"></uni-icons>
-				Quinn Zuo
+				<view class="username" >Quinn Zuo </view>
 				<button @tap="Save">Save</button>
 			</view>
 			<view class="profile-wrap">
@@ -138,6 +138,10 @@ page{
 				justify-content: space-between;
 				align-items: center;
 				padding: 0 20px;
+				.username {
+					font-weight: 700;
+					font-size: 20px;
+				}
 
 				.uni-icons {
 					flex: 0 0 80upx;

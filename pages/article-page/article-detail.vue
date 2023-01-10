@@ -159,11 +159,14 @@
 					});
 					return;
 				}
-                uni.showLoading({
-					mask: true,
-					title:"请稍后..."
-				});
-			  
+                uni.showModal({
+						content: "Article has been Posted",
+						confirmText:"OK",
+						showCancel:false,
+						success: (confirmRes) => {
+						
+						},
+					}); 
                 
             }
         },

@@ -100,12 +100,12 @@ export default {
 			return
 		}
       uni.showModal({
-        content: "Password has been changed!",
+        content: "Phone number has been changed!",
         confirmText: "Done",
         showCancel: false,
         success: (confirmRes) => {
           this.$mRouter.push({
-            route: "/pages/user/user",
+            route: "/pages/entry/index",
           });
         },
       });
@@ -115,6 +115,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.verify-btn {
+	font-size: 14px;
+}
 .done-btn {
   width: 700rpx;
   margin-left: 25rpx;

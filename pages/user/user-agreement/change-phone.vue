@@ -107,6 +107,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between; 
+			.verify-btn{
+				font-size:14px;
+			}
 			&>view:nth-child(1) {
 				display: flex;
 				align-items: center;
