@@ -25,7 +25,7 @@
         </view>
       </view>
       <view class="panel-following" v-if="current===1">
-        <view class="item" v-for="(item, index) in followings" :key="index">
+        <view class="item" v-for="(item, index) in followingers" :key="index">
           <image class="profileimg"   :src="item.img"  mode=""></image>
           <view class="names">
             <view class="name">{{item.name }}</view>
@@ -45,6 +45,23 @@ export default {
   data() {
     return {
       current: 0,
+      followingers:[ 
+        {
+          img:"/static/img/profile/1.png",
+          name:"Yekslea",
+          remark:"Yekslea",
+        },
+        {
+          img:"/static/img/profile/2.png",
+          name:"Yekslea",
+          remark:"Yekslea",
+        },
+        {
+          img:"/static/img/profile/3.png",
+          name:"Yekslea",
+          remark:"kdjansdkl",
+        }
+      ],
       followings:[
         {
           img:"/static/img/logo.png",
