@@ -105,13 +105,13 @@
 			margin-top: 15rpx;
 		}
 		.img {
-				width: 200rpx;
-				height: 200rpx;
+				width: 180rpx;
+				height: 180rpx;
 				margin-right: 25rpx;
 		}
 	 
 		.lineimg{
-			margin-left: 100rpx;
+			margin-left: 90rpx;
 			width: 5rpx;
 			height: 200rpx;
 		}
