@@ -72,6 +72,7 @@ We really appreciate your feedback, Anders!</view>
             border-radius: 35rpx; 
         }
         .feedbackimg{
+            margin-top:25rpx;
             margin-left: 315rpx;
             width: 120rpx;
             height: 120rpx;
