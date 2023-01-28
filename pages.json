@@ -292,8 +292,20 @@
                     "titleNView": true,
                     "bounce": "none"
                 }
-            }
-            
+            } 
+        },
+        {
+            "path" : "pages/user/cooperation",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Cooperation",
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            } 
         },
         {
             "path" : "pages/user/comments",
@@ -926,6 +938,11 @@
                         "navigationBarTitleText": "我的反馈"
                     }
                 }, {
+                    "path": "success",
+                    "style": {
+                        "navigationBarTitleText": "Feedback"
+                    }
+                },{
                     "path": "feedbackdetail",
                     "style": {
                         "navigationBarTitleText": "我的反馈"
@@ -934,11 +951,11 @@
                 {
                     "path": "uni-feedback",
                     "style": {
-                        "navigationBarTitleText": "意见和需求反馈",
+                        "navigationBarTitleText": "Feedback",
                         "app-plus": {
                             "titleNView": {
                                 "buttons": [{
-                                    "text": "我的反馈",
+                                    "text": "",
                                     "fontSize": "15px",
                                     "float": "right",
                                     "width": "auto"

@@ -41,14 +41,14 @@
 		</view>
 
 		<view class="list-card">
-			<view class="list-card__item" @tap="goto('/pages/article-page/preference')" >
+			<view class="list-card__item" @tap="goto('/pages/user/cooperation')" >
 				<view class="card__item__label"  >
 					<image class="item-icon" src="/static/img/profile/ren.svg" mode=""></image>
 					Cooperation
 				</view>
 				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
-			<view class="list-card__item"  >
+			<view class="list-card__item" @tap="goto('/pages/uni-feedback/uni-feedback')"   >
 				<view class="card__item__label">
 					<image class="item-icon" src="/static/img/profile/dianzan.svg" mode=""></image>
 					Feedback
@@ -59,6 +59,13 @@
 				<view class="card__item__label">
 					<image class="item-icon" src="/static/img/profile/gantan.svg" mode=""></image>
 					About us
+				</view>
+				<uni-icons type="forward"  size="12"></uni-icons>
+			</view>
+			<view class="list-card__item" @tap="goto('/pages/article-page/preference')">
+				<view class="card__item__label">
+					<image class="item-icon" src="/static/img/profile/gantan.svg" mode=""></image>
+					Preference
 				</view>
 				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
