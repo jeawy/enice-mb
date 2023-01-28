@@ -254,10 +254,52 @@
             
         },
         {
+            "path" : "pages/user/newfollowers",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "New Followers",
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+            
+        },
+        {
             "path" : "pages/user/notices",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "Finney",
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+            
+        },
+        {
+            "path" : "pages/user/likes",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Likes & Colloects",
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+            
+        },
+        {
+            "path" : "pages/user/comments",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Comments",
                 "enablePullDownRefresh": false,
                 "app-plus": {
                     "backgroundColor": "#FFFFFF",

@@ -1,32 +1,18 @@
 <template>
-  <view class="selectcommunitylist">
-    
-    <view class="header">
-        <view class="headeritem" @tap="goto(item.url)" v-for="(item, index) in headers" :key="index">
-          <view><image class="img"   :src="item.img"  mode=""></image></view>
-          <view class="name">{{item.txt }}</view>
-        </view>
-    </view>
- 
+  <view class="selectcommunitylist"> 
     <view class="follows"> 
-      <uni-swipe-action>  
-          <uni-swipe-action-item class="panel-following" 
-          v-for="(item, index) in followings" :key="index" 
-          :right-options="options"  @click="bindClick"
-           @change="swipeChange($event, index)">
-            <view class="item" >
+       
+            <view class="item" v-for="(item, index) in followings" :key="index" >
               <image class="profileimg"   :src="item.img"  mode=""></image>
               <view class="names">
                 <view class="name">{{item.name }}</view>
                 <view class="remark">{{item.remark }}</view>
+                <view class="remark">| {{item.name2 }}</view>
               </view>
               <view class="actions">
-                <view class="name">{{item.date }}</view>
-                <view class="remark">{{item.time }}</view>
+                <image class="rightimg"   :src="item.rightimg"  mode=""></image>
               </view>
-            </view>
-          </uni-swipe-action-item> 
-    </uni-swipe-action>
+            </view>  
     </view>
   </view>
 </template>
@@ -44,60 +30,42 @@ export default {
             }
         }
       ],
-      headers:[
-        {
-          url:"/pages/user/likes",
-          img:"/static/img/notice1.png",
-          txt:"Likes & Col"
-        },
-        {
-          url:"/pages/user/newfollowers",
-          img:"/static/img/notice2.png",
-          txt:"New Followers",
-          
-        },
-        {
-          url:"/pages/user/comments",
-          img:"/static/img/notice3.png",
-          txt:"Comments",
-          
-        },
-      ],
+      
       followings:[
         {
           img:"/static/img/profile/1.png",
           name:"Margaret",
+          name2:"nice car",
           remark:"Labore nam dolorem ea prae...",
-          date:"11 May 21 ",
-          time:"09:40 PM"
+          rightimg:"/static/img/home/1.png" 
         },
         {
           img:"/static/img/profile/2.png",
           name:"Reyes",
+          name2:"nice car",
           remark:"omnis praesentium enim",
-          date:"12 May 21 ",
-          time:"11:40 PM"
+          rightimg:"/static/img/home/car2.png" 
         },
         {
           img:"/static/img/profile/3.png",
           name:"Marques",
+          name2:"nice car",
           remark:"iure quo sint",
-          date:"14 May 21 ",
-          time:"22:40 PM"
+          rightimg:"/static/img/home/image29.png"  
         },
         {
           img:"/static/img/profile/1.png",
           name:"Cynthia",
+          name2:"nice car",
           remark:"veritatis rerum sunt",
-          date:"14 May 21 ",
-          time:"22:40 PM"
+          rightimg:"/static/img/home/image25.png" 
         },
         {
           img:"/static/img/profile/2.png",
           name:"Waldo",
+          name2:"nice car",
           remark:"voluptates exercitationem id",
-          date:"14 May 21 ",
-          time:"22:40 PM"
+          rightimg:"/static/img/home/image26.png" 
         } 
       ],
       items: [ '32 Following', '106 Followers'],
@@ -115,16 +83,6 @@ export default {
     this.baseAppUrl = this.$mStore.state.BaseAppStaticUrl;
   },
   methods: {
-    goto(url){
-				/*
-				uni.navigateTo({
-					url:url
-				})
-				*/
-				this.$mRouter.push(
-					{route:url}
-				)
-			},
     bindClick(e){
       this.followings.splice(e.index, 1)
       console.log('点击了'+(e.position === 'left' ? '左侧' : '右侧') + e.content.text + '按钮')
@@ -173,17 +131,19 @@ page {
   .item{
     display: flex;
     margin: 0 25rpx;
-    padding-bottom: 25rpx;
-    padding-top: 25rpx;
+    padding-bottom: 5rpx;
+    padding-top: 5rpx;
     border-bottom: 1px solid #F4F2F6;
     .profileimg{
       width: 120rpx;
       height: 120rpx;
       border-radius: 60rpx;
-      margin-right: 15rpx;
+      margin-right: 25rpx;
+      margin-top: 35rpx;
     }
     .names{
       width: 400rpx;
+      margin-top: 25rpx;
       .name{
         color: #333333;
         font-weight: 600;
@@ -198,9 +158,10 @@ page {
     .actions
     {
       padding-top:20rpx;
-      .remark{ 
-        font-size: 14px;
-        color: #8C8896;
+      .rightimg{ 
+        border-radius: 20rpx;
+        width: 160rpx;
+        height: 160rpx;
       }
     }
   } 
