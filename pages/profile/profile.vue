@@ -55,7 +55,7 @@
 				</view>
 				<uni-icons type="forward"  size="12"></uni-icons>
 			</view>
-			<view class="list-card__item">
+			<view class="list-card__item"  @tap="goto('/pages/user/aboutus')">
 				<view class="card__item__label">
 					<image class="item-icon" src="/static/img/profile/gantan.svg" mode=""></image>
 					About us
