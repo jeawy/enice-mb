@@ -230,7 +230,26 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "Upcoming",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
+            }
+            
+        },
+        {
+            "path" : "pages/user/followers",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Finney",
+                "enablePullDownRefresh": false,
+                "app-plus": {
+                    "backgroundColor": "#FFFFFF",
+                    "titleNView": true,
+                    "bounce": "none"
+                }
             }
             
         },

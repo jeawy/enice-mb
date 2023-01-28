@@ -78,7 +78,7 @@
 						icon: '/static/img/pencel.png'
 					},
 					{
-						url1:"",
+						url1:"/pages/user/followers",
 						url:"/pages/user/communities",
 						label: "Followers",
 						num: 160,
