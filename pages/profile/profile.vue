@@ -93,7 +93,7 @@
 					},
 					{
 						url1:"/pages/user/communities",
-						url:"",
+						url:"/pages/user/notices",
 						label: "Likes & Cols",
 						num: 300,
 						icon:'/static/img/chat.png'
